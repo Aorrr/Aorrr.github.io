@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>category on My New Hugo Site</title>
-    <link>http://example.org/categories/category/</link>
-    <description>Recent content in category on My New Hugo Site</description>
+    <title>category on Hugo tranquilpeak theme</title>
+    <link>https://example.org/categories/category/</link>
+    <description>Recent content in category on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
     <lastBuildDate>Wed, 11 Dec 2019 19:46:35 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/categories/category/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.org/categories/category/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My First Post</title>
-      <link>http://example.org/post/my-first-post/</link>
+      <link>https://example.org/2019/12/my-first-post/</link>
       <pubDate>Wed, 11 Dec 2019 19:46:35 +0800</pubDate>
       
-      <guid>http://example.org/post/my-first-post/</guid>
+      <guid>https://example.org/2019/12/my-first-post/</guid>
       <description>&lt;h1 id=&#34;welcome-&#34;&gt;Welcome !&lt;/h1&gt;</description>
     </item>
     
