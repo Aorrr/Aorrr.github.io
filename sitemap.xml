@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://fatooo-0027.github.io/categories/category/</loc>
-    <lastmod>2019-12-11T19:46:35+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://fatooo-0027.github.io/</loc>
     <lastmod>2019-12-11T19:46:35+08:00</lastmod>
   </url>
@@ -28,11 +23,6 @@
   </url>
   
   <url>
-    <loc>https://fatooo-0027.github.io/categories/subcategory/</loc>
-    <lastmod>2019-12-11T19:46:35+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://fatooo-0027.github.io/tags/tag1/</loc>
     <lastmod>2019-12-11T19:46:35+08:00</lastmod>
   </url>
@@ -44,6 +34,11 @@
   
   <url>
     <loc>https://fatooo-0027.github.io/tags/</loc>
+    <lastmod>2019-12-11T19:46:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fatooo-0027.github.io/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2019-12-11T19:46:35+08:00</lastmod>
   </url>
   
