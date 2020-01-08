@@ -7,38 +7,38 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Adam">
-<meta name="keywords" content="二分查找">
-<meta name="description" content="二分查找的功能是在一个有序的元素列表中查找一个特定的元素。">
+<meta name="keywords" content="micro:bit">
+<meta name="description" content="通过Codelab Adapter在Teachable Machine和Micro:bit之间进行通信">
 
 
-<meta property="og:description" content="二分查找的功能是在一个有序的元素列表中查找一个特定的元素。">
+<meta property="og:description" content="通过Codelab Adapter在Teachable Machine和Micro:bit之间进行通信">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二分查找">
-<meta name="twitter:title" content="二分查找">
-<meta property="og:url" content="https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
-<meta property="twitter:url" content="https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+<meta property="og:title" content="手势操控micro:bit小车">
+<meta name="twitter:title" content="手势操控micro:bit小车">
+<meta property="og:url" content="https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/">
+<meta property="twitter:url" content="https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/">
 <meta property="og:site_name" content="Hugo tranquilpeak theme">
-<meta property="og:description" content="二分查找的功能是在一个有序的元素列表中查找一个特定的元素。">
-<meta name="twitter:description" content="二分查找的功能是在一个有序的元素列表中查找一个特定的元素。">
+<meta property="og:description" content="通过Codelab Adapter在Teachable Machine和Micro:bit之间进行通信">
+<meta name="twitter:description" content="通过Codelab Adapter在Teachable Machine和Micro:bit之间进行通信">
 <meta property="og:locale" content="zh-cn">
 
   
-    <meta property="article:published_time" content="2020-01-08T12:51:03">
+    <meta property="article:published_time" content="2020-01-08T15:33:17">
   
   
-    <meta property="article:modified_time" content="2020-01-08T12:51:03">
+    <meta property="article:modified_time" content="2020-01-08T15:33:17">
   
-  
-  
-    
-      <meta property="article:section" content="算法学习笔记">
-    
   
   
     
-      <meta property="article:tag" content="二分查找">
+      <meta property="article:section" content="Codelab">
     
-      <meta property="article:tag" content="算法">
+  
+  
+    
+      <meta property="article:tag" content="Codelab">
+    
+      <meta property="article:tag" content="micro:bit">
     
   
 
@@ -59,14 +59,14 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/1affc2c02f2d6d18e486f1befcd1eea5?s=640">
 
 
-    <title>二分查找</title>
+    <title>手势操控micro:bit小车</title>
 
     <link rel="icon" href="https://fatooo-0027.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+    <link rel="canonical" href="https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -204,13 +204,13 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      二分查找
+      手势操控micro:bit小车
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-01-08T12:51:03&#43;08:00">
+      <time itemprop="datePublished" datetime="2020-01-08T15:33:17&#43;08:00">
         
   一月 8, 2020
 
@@ -221,7 +221,7 @@
   
     <span>发布在</span>
     
-      <a class="category-link" href="https://fatooo-0027.github.io/categories/%e7%ae%97%e6%b3%95%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0">算法学习笔记</a>
+      <a class="category-link" href="https://fatooo-0027.github.io/categories/codelab">Codelab</a>
     
   
 
@@ -231,33 +231,52 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="heading">二分查找</h1>
-<h4 id="heading1">功能</h4>
-<p>二分查找的功能是在一个有序的元素列表中查找一个特定的元素。</p>
-<h4 id="heading2">时间复杂度</h4>
-<p>O(log n)</p>
-<h4 id="heading3">原理</h4>
-<p>比方说你和朋友在玩猜数游戏，朋友先想好一个1到100的数，由你来猜这个数是多少。每猜一次朋友都会告诉你你猜的数是大了还是小了。要解决这个问题有两个办法。</p>
-<p>第一个办法是从1开始猜，一直猜到100。但如果对方想的数是100，那我们就需要猜100次才能猜对。这种方法的效率比较低。这种方法相当于遍历整个列表，进行一一比较。</p>
-<p>第二个办法是先猜50，如果小了，那么小于等于50的数字就都被排除了。每次都猜范围内的中间数。这样我们每次都能排除掉一半的数字，效率提高了很多。这就是二分查找。</p>
-<h4 id="python">Python实现</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">binarySearch</span>(list, item):
-    low <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-    high <span style="color:#f92672">=</span> len(list) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
-    <span style="color:#66d9ef">while</span> low <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> high:
-        mid <span style="color:#f92672">=</span> (low <span style="color:#f92672">+</span> high) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
-        guess <span style="color:#f92672">=</span> list[mid]
-        <span style="color:#66d9ef">if</span> guess <span style="color:#f92672">==</span> item:
-            <span style="color:#66d9ef">return</span> mid
-        <span style="color:#66d9ef">if</span> guess <span style="color:#f92672">&gt;</span> item:
-            high <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">else</span>:
-            low <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
-    <span style="color:#66d9ef">return</span> None
-
-ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
-<span style="color:#66d9ef">print</span>(binarySearch(ls, <span style="color:#ae81ff">2</span>))
-</code></pre></div><p>摘自：《算法图解》</p>
+              <h1 id="microbit">手势操控micro:bit小车</h1>
+<h3 id="heading">准备</h3>
+<p>软件</p>
+<ul>
+<li>
+<p>安装<a href="https://adapterv2.codelab.club/user_guide/install/">Codelab Adapter</a></p>
+</li>
+<li>
+<p>安装<a href="https://www.google.cn/chrome/index.html">Chrome 浏览器</a></p>
+</li>
+<li>
+<p>安装 Chrome 浏览器插件:<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a></p>
+</li>
+<li>
+<p>安装 Tampermonkey 脚本<a href="https://gist.github.com/wwj718/78402d0de9efb8d33742c8770056489c/raw/1269fef28877f4c7625a4dd21990271fdf04cfe8/Teachablemachine_Result_fixed.user.js">Teachablemachine_Result.user.js</a></p>
+</li>
+</ul>
+<p>硬件</p>
+<ul>
+<li>ring:bit小车</li>
+<li>两块micro:bit（一块用于驱动小车，一块接入电脑作为消息中转）</li>
+</ul>
+<h3 id="codelab-adapter">关于Codelab Adapter</h3>
+<p>Codelab Adapter的详细介绍及使用方法参见https://codelab-adapter-docs.codelab.club/。在开始该项目前建议先阅读<a href="https://codelab-adapter-docs.codelab.club/extension_guide/microbit_radio/">micro:bit radio</a>、<a href="https://codelab-adapter-docs.codelab.club/extension_guide/eim/">EIM</a>以及<a href="https://codelab-adapter-docs.codelab.club/extension_guide/teachable_machine/">Teachable Machine</a>这三篇教学。</p>
+<h3 id="1">步骤1：</h3>
+<p>首先将用于中转的micro:bit准备好。将中转站micro:bit接入电脑，然后下载<a href="https://codelab-adapter-docs.codelab.club/hex/microbit_radio_adapter.hex">microbit_radio_adapter.hex</a>，将该文件拖入到中转站micro:bit中。这样中转站micro:bit就准备好了。</p>
+<p>中转站micro:bit的作用是接收adapter发送的消息传递给小车，或者把小车发送过来的消息传递给adapter。中转站如何与adapter交流不需要理解，我们只需要把消息发送给中转站，中转站自然会将消息转发给adapter。同样我们只需要使用在<a href="https://scratch3.codelab.club/">Codelab Scratch</a>中的EIM模块来广播，中转站接收到adapter的广播就会把消息转发到小车上。</p>
+<h3 id="2">步骤2：</h3>
+<p>使用<a href="https://makecode.microbit.org/">makecode</a>为小车的micro:bit编程。我们需要将这个micro:bit的无线频道设置为1（和中转站相同），以实现和中转站的通信。以下是源代码https://makecode.microbit.org/_WUPYg0eL7Jwh。</p>
+<p>这里我设定的是当接收到信号”1“的时候，小车前进，接收到信号”2“的时候小车左转，信号”3“表示小车右转，信号”4“表示刹车。</p>
+<h3 id="3">步骤3：</h3>
+<p>完成训练后，运行下载好的Codelab Adapter。然后打开<a href="https://scratch3.codelab.club/">Codelab Scratch</a>。</p>
+<h3 id="4">步骤4：</h3>
+<p>用tampermonkey启用刚刚安装到Chrome浏览器的插件打开<a href="https://teachablemachine.withgoogle.com/train">Teachable Machine</a>官网，如果弹出信息”connected ！”表示adapter已经成功连接到Teachable Machine。Teachable Machine与adapter连接成功后每隔一小段时间会把识别的数据发送给adapter。可以用adapter中EIM模块的“received message”积木块来获取Teachable Machine发来的信息。</p>
+<p>选择Image Project，然后训练不同的手势。</p>
+<p><img src="C:%5CUsers%5Caoran%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200108170142906.png" alt="image-20200108170142906"></p>
+<p>获取到的图像是镜像的（所以上图左右反过来了）。然后点击Train Model。</p>
+<h3 id="5">步骤5：</h3>
+<p>回到codelab scratch的界面。点击左下角的加号，添加EIM模块以及JSON模块。我们可以用EIM模块中的”广播“积木块来向小车发送消息。</p>
+<p><img src="C:%5CUsers%5Caoran%5COneDrive%5C%E6%A1%8C%E9%9D%A2/2.png" alt="avatar"></p>
+<p>以上积木块可以向小车发送信号1，即让小车前进。</p>
+<p>完整的scratch程序：<img src="C:%5CUsers%5Caoran%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200108165657558.png" alt="image-20200108165657558"></p>
+<h3 id="heading1">步骤五：</h3>
+<p>此时应该可以看到Teachable Machine已经开始向adapter发送数据(上图右侧的“当接收到”积木块会持续闪烁)。此时重新连接中转站micro:bit，然后打开adapter UI中的micro:bit radio插件以及小车的开关，然后点击codelab scratch界面中的小绿旗。小车就可以根据我们的手势进行运动啦！</p>
+<h3 id="heading2">视频</h3>
+<!-- raw HTML omitted -->
 
               
             </div>
@@ -270,9 +289,9 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">标签</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://fatooo-0027.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>
+  <a class="tag tag--primary tag--small" href="https://fatooo-0027.github.io/tags/codelab/">Codelab</a>
 
-  <a class="tag tag--primary tag--small" href="https://fatooo-0027.github.io/tags/%E7%AE%97%E6%B3%95/">算法</a>
+  <a class="tag tag--primary tag--small" href="https://fatooo-0027.github.io/tags/microbit/">micro:bit</a>
 
                   </div>
                 
@@ -285,7 +304,7 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2019/12/rrf%E4%BD%BF%E7%94%A8%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E5%92%8C%E8%AF%B4%E6%98%8E/" data-tooltip="RRF使用时遇到的一些问题和说明">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" data-tooltip="二分查找">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -293,7 +312,7 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/" data-tooltip="手势操控micro:bit小车">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -311,19 +330,19 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -371,7 +390,7 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2019/12/rrf%E4%BD%BF%E7%94%A8%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E5%92%8C%E8%AF%B4%E6%98%8E/" data-tooltip="RRF使用时遇到的一些问题和说明">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" data-tooltip="二分查找">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -379,7 +398,7 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/" data-tooltip="手势操控micro:bit小车">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -397,19 +416,19 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -439,19 +458,19 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E4%25BA%258C%25E5%2588%2586%25E6%259F%25A5%25E6%2589%25BE%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E6%2589%258B%25E5%258A%25BF%25E6%2593%258D%25E6%258E%25A7microbit%25E5%25B0%258F%25E8%25BD%25A6%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E4%25BA%258C%25E5%2588%2586%25E6%259F%25A5%25E6%2589%25BE%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E6%2589%258B%25E5%258A%25BF%25E6%2593%258D%25E6%258E%25A7microbit%25E5%25B0%258F%25E8%25BD%25A6%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E4%25BA%258C%25E5%2588%2586%25E6%259F%25A5%25E6%2589%25BE%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E6%2589%258B%25E5%258A%25BF%25E6%2593%258D%25E6%258E%25A7microbit%25E5%25B0%258F%25E8%25BD%25A6%2F">
           <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
         </a>
       </li>
@@ -541,9 +560,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/fatooo-0027.github.io\/2020\/01\/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE\/';
+          this.page.url = 'https:\/\/fatooo-0027.github.io\/2020\/01\/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6\/';
           
-            this.page.identifier = '\/2020\/01\/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE\/'
+            this.page.identifier = '\/2020\/01\/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6\/'
           
         };
         (function() {
