@@ -6,10 +6,37 @@
     <description>Recent content in Posts on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 08 Jan 2020 15:33:17 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jan 2020 21:58:05 +0800</lastBuildDate>
     
 	<atom:link href="https://fatooo-0027.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>分治</title>
+      <link>https://fatooo-0027.github.io/2020/01/%E5%88%86%E6%B2%BB/</link>
+      <pubDate>Mon, 13 Jan 2020 21:58:05 +0800</pubDate>
+      
+      <guid>https://fatooo-0027.github.io/2020/01/%E5%88%86%E6%B2%BB/</guid>
+      <description>分治（Divide and Conquer）并不是一种实际的算法，而是一种解决问题的思路。所谓分治，就是“分而治之”，即把一个复杂的问题分成多个相同的子问题，然后再把这些子问题继续分成更小的子问题，直到每个子问题简单到可以直接求解，然后再利用子问题的解求得原问题的解。</description>
+    </item>
+    
+    <item>
+      <title>简易分类器</title>
+      <link>https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E7%B1%BB%E5%99%A8/</link>
+      <pubDate>Sat, 11 Jan 2020 21:07:27 +0800</pubDate>
+      
+      <guid>https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E7%B1%BB%E5%99%A8/</guid>
+      <description>简易分类器 准备 软件
+ 安装Codelab Adapter 安装Chrome 浏览器 安装 Chrome 浏览器插件:Tampermonkey 安装 Tampermonkey 脚本Teachablemachine_Result.user.js  硬件
+ 一个舵机 纸 双面胶 任意一块micro:bit拓展板（可接入舵机就行） 两块micro:bit  关于Codelab Adapter Codelab Adapter的详细介绍及使用方法参见https://codelab-adapter-docs.codelab.club/。在开始该项目前建议先阅读micro:bit radio、EIM以及Teachable Machine这三篇教学。
+步骤1： 按照micro:bit radio的教程完成中转站micro:bit的连接和程序烧入。
+步骤2： 开始做手工！用纸做一个简单的支架，将舵机固定到电脑屏幕上方摄像头的位置（如果有外部摄像头就不必折腾）。然后做一个小容器用来装需要分类的零件，用双面胶贴到舵机的转头上。
+步骤3： 运行Codelab Adapter，打开Codelab Scratch。然后打开Teachable Machine。此时网页如果弹出“Connected ！”表明Teachable Machine已经成功连接Adapter。
+步骤4： 训练Teachable Machine。分别将蓝色和黑色的乐高零件放到分类器的小容器中，让Teachable Machine进行识别。尽可能改变零件的位置，让AI学习到各种可能出现的情况。
+步骤5： 回到Codelab Scratch的界面，我们可以开始用scratch编程。
+需要点击左下角添加EIM模块和JSON模块。Teachable Machine发回的消息采用的是JSON格式，可以通过“get value by key”积木块来获取Teachable Machine中对于各个类的置信度。当蓝色置信度大于0.8，则发送信号1，灰色则发送信号2，都不大于0.8则发送信号0。
+https://makecode.microbit.org/_3osCzmKJmTV3</description>
+    </item>
     
     <item>
       <title>手势操控micro:bit小车</title>

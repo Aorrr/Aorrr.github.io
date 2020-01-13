@@ -6,10 +6,19 @@
     <description>Recent content in 算法学习笔记 on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 08 Jan 2020 12:51:03 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jan 2020 21:58:05 +0800</lastBuildDate>
     
 	<atom:link href="https://fatooo-0027.github.io/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>分治</title>
+      <link>https://fatooo-0027.github.io/2020/01/%E5%88%86%E6%B2%BB/</link>
+      <pubDate>Mon, 13 Jan 2020 21:58:05 +0800</pubDate>
+      
+      <guid>https://fatooo-0027.github.io/2020/01/%E5%88%86%E6%B2%BB/</guid>
+      <description>分治（Divide and Conquer）并不是一种实际的算法，而是一种解决问题的思路。所谓分治，就是“分而治之”，即把一个复杂的问题分成多个相同的子问题，然后再把这些子问题继续分成更小的子问题，直到每个子问题简单到可以直接求解，然后再利用子问题的解求得原问题的解。</description>
+    </item>
     
     <item>
       <title>二分查找</title>

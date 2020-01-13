@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>算法 on Hugo tranquilpeak theme</title>
-    <link>https://fatooo-0027.github.io/tags/%E7%AE%97%E6%B3%95/</link>
-    <description>Recent content in 算法 on Hugo tranquilpeak theme</description>
+    <title>分治 on Hugo tranquilpeak theme</title>
+    <link>https://fatooo-0027.github.io/tags/%E5%88%86%E6%B2%BB/</link>
+    <description>Recent content in 分治 on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 13 Jan 2020 21:58:05 +0800</lastBuildDate>
     
-	<atom:link href="https://fatooo-0027.github.io/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fatooo-0027.github.io/tags/%E5%88%86%E6%B2%BB/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://fatooo-0027.github.io/2020/01/%E5%88%86%E6%B2%BB/</guid>
       <description>分治（Divide and Conquer）并不是一种实际的算法，而是一种解决问题的思路。所谓分治，就是“分而治之”，即把一个复杂的问题分成多个相同的子问题，然后再把这些子问题继续分成更小的子问题，直到每个子问题简单到可以直接求解，然后再利用子问题的解求得原问题的解。</description>
-    </item>
-    
-    <item>
-      <title>二分查找</title>
-      <link>https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</link>
-      <pubDate>Wed, 08 Jan 2020 12:51:03 +0800</pubDate>
-      
-      <guid>https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</guid>
-      <description>二分查找的功能是在一个有序的元素列表中查找一个特定的元素。</description>
     </item>
     
   </channel>
