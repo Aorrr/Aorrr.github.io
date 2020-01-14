@@ -9,7 +9,7 @@
 <meta name="author" content="Adam">
 <meta name="keywords" content="micro:bit">
 <meta name="description" content="简易分拣器（无传感器） 利用Codelab Adapter和Teachable Machine，再配合电脑上自带的摄像头，我们可以做一个简单的分拣器，不需要使用任何传感器。Teachable Machine的功能十分强大，它可以通过机器学习识别各种各样的物品，而不仅仅是对颜色进行分类。大家可以大开脑洞，做出更有意思的东西。
-准备 软件
+准备 软件
  安装Codelab Adapter 安装Chrome 浏览器 安装 Chrome 浏览器插件:Tampermonkey 安装 Tampermonkey 脚本Teachablemachine_Result.user.js  硬件
  一个舵机 乐高零件（用纸代替也可以） 双面胶 任意一块micro:bit拓展板（可接入舵机就行） 两块micro:bit  关于Codelab Adapter Codelab Adapter的详细介绍及使用方法参见https://codelab-adapter-docs.codelab.club/。在开始该项目前建议先阅读micro:bit radio、EIM以及Teachable Machine这三篇教学。
 步骤1： 按照micro:bit radio的教程完成中转站micro:bit的连接和程序烧入。
@@ -22,12 +22,11 @@
 步骤5： 回到Codelab Scratch的界面，我们可以开始用scratch编程。
 需要点击左下角添加EIM模块和JSON模块。Teachable Machine发回的消息采用的是JSON格式，可以通过JSON模块下的“get value by key”积木块来获取Teachable Machine中对于各个类的置信度。当蓝色置信度大于0.8，则发送信号1，灰色大于0.8则发送信号2，都不大于0.8则发送信号0，每次发送完毕后等待0.1秒，避免接收方信号过多来不及处理。
 步骤6： 接下来可以用makecode为控制舵机的microbit进行编程了。完整程序如下：https://makecode.microbit.org/_fE0MaxbaM527。用一个变量I来控制舵机左转或右转。当接收到信号1的时候将变量设为1，当收到信号2的时候设为2，收到信号0则设为0（不用管那个ok变量，之前忘记移除，懒得修改了）。完成以后烧入microbit。
-步骤7： 接上中转站microbit，点开adapter UI界面中的microbit radio插件，然后点击Codelab Scratch界面的小绿旗。如果控制舵机的microbit显示出一个勾，就表明已经可以正常运行啦！
-Tips：记得把Teachable Machine的页面放到一个新的窗口，然后同时打开Scratch和Teachable Machine的页面，否则会出Bug。">
+步骤7： 接上中转站microbit，点开adapter UI界面中的microbit radio插件，然后点击Codelab Scratch界面的小绿旗。如果控制舵机的microbit显示出一个勾，就表明已经可以正常运行啦！">
 
 
 <meta property="og:description" content="简易分拣器（无传感器） 利用Codelab Adapter和Teachable Machine，再配合电脑上自带的摄像头，我们可以做一个简单的分拣器，不需要使用任何传感器。Teachable Machine的功能十分强大，它可以通过机器学习识别各种各样的物品，而不仅仅是对颜色进行分类。大家可以大开脑洞，做出更有意思的东西。
-准备 软件
+准备 软件
  安装Codelab Adapter 安装Chrome 浏览器 安装 Chrome 浏览器插件:Tampermonkey 安装 Tampermonkey 脚本Teachablemachine_Result.user.js  硬件
  一个舵机 乐高零件（用纸代替也可以） 双面胶 任意一块micro:bit拓展板（可接入舵机就行） 两块micro:bit  关于Codelab Adapter Codelab Adapter的详细介绍及使用方法参见https://codelab-adapter-docs.codelab.club/。在开始该项目前建议先阅读micro:bit radio、EIM以及Teachable Machine这三篇教学。
 步骤1： 按照micro:bit radio的教程完成中转站micro:bit的连接和程序烧入。
@@ -40,8 +39,7 @@ Tips：记得把Teachable Machine的页面放到一个新的窗口，然后同�
 步骤5： 回到Codelab Scratch的界面，我们可以开始用scratch编程。
 需要点击左下角添加EIM模块和JSON模块。Teachable Machine发回的消息采用的是JSON格式，可以通过JSON模块下的“get value by key”积木块来获取Teachable Machine中对于各个类的置信度。当蓝色置信度大于0.8，则发送信号1，灰色大于0.8则发送信号2，都不大于0.8则发送信号0，每次发送完毕后等待0.1秒，避免接收方信号过多来不及处理。
 步骤6： 接下来可以用makecode为控制舵机的microbit进行编程了。完整程序如下：https://makecode.microbit.org/_fE0MaxbaM527。用一个变量I来控制舵机左转或右转。当接收到信号1的时候将变量设为1，当收到信号2的时候设为2，收到信号0则设为0（不用管那个ok变量，之前忘记移除，懒得修改了）。完成以后烧入microbit。
-步骤7： 接上中转站microbit，点开adapter UI界面中的microbit radio插件，然后点击Codelab Scratch界面的小绿旗。如果控制舵机的microbit显示出一个勾，就表明已经可以正常运行啦！
-Tips：记得把Teachable Machine的页面放到一个新的窗口，然后同时打开Scratch和Teachable Machine的页面，否则会出Bug。">
+步骤7： 接上中转站microbit，点开adapter UI界面中的microbit radio插件，然后点击Codelab Scratch界面的小绿旗。如果控制舵机的microbit显示出一个勾，就表明已经可以正常运行啦！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简易分类器">
 <meta name="twitter:title" content="简易分类器">
@@ -49,7 +47,7 @@ Tips：记得把Teachable Machine的页面放到一个新的窗口，然后同�
 <meta property="twitter:url" content="https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E7%B1%BB%E5%99%A8/">
 <meta property="og:site_name" content="Hugo tranquilpeak theme">
 <meta property="og:description" content="简易分拣器（无传感器） 利用Codelab Adapter和Teachable Machine，再配合电脑上自带的摄像头，我们可以做一个简单的分拣器，不需要使用任何传感器。Teachable Machine的功能十分强大，它可以通过机器学习识别各种各样的物品，而不仅仅是对颜色进行分类。大家可以大开脑洞，做出更有意思的东西。
-准备 软件
+准备 软件
  安装Codelab Adapter 安装Chrome 浏览器 安装 Chrome 浏览器插件:Tampermonkey 安装 Tampermonkey 脚本Teachablemachine_Result.user.js  硬件
  一个舵机 乐高零件（用纸代替也可以） 双面胶 任意一块micro:bit拓展板（可接入舵机就行） 两块micro:bit  关于Codelab Adapter Codelab Adapter的详细介绍及使用方法参见https://codelab-adapter-docs.codelab.club/。在开始该项目前建议先阅读micro:bit radio、EIM以及Teachable Machine这三篇教学。
 步骤1： 按照micro:bit radio的教程完成中转站micro:bit的连接和程序烧入。
@@ -62,10 +60,9 @@ Tips：记得把Teachable Machine的页面放到一个新的窗口，然后同�
 步骤5： 回到Codelab Scratch的界面，我们可以开始用scratch编程。
 需要点击左下角添加EIM模块和JSON模块。Teachable Machine发回的消息采用的是JSON格式，可以通过JSON模块下的“get value by key”积木块来获取Teachable Machine中对于各个类的置信度。当蓝色置信度大于0.8，则发送信号1，灰色大于0.8则发送信号2，都不大于0.8则发送信号0，每次发送完毕后等待0.1秒，避免接收方信号过多来不及处理。
 步骤6： 接下来可以用makecode为控制舵机的microbit进行编程了。完整程序如下：https://makecode.microbit.org/_fE0MaxbaM527。用一个变量I来控制舵机左转或右转。当接收到信号1的时候将变量设为1，当收到信号2的时候设为2，收到信号0则设为0（不用管那个ok变量，之前忘记移除，懒得修改了）。完成以后烧入microbit。
-步骤7： 接上中转站microbit，点开adapter UI界面中的microbit radio插件，然后点击Codelab Scratch界面的小绿旗。如果控制舵机的microbit显示出一个勾，就表明已经可以正常运行啦！
-Tips：记得把Teachable Machine的页面放到一个新的窗口，然后同时打开Scratch和Teachable Machine的页面，否则会出Bug。">
+步骤7： 接上中转站microbit，点开adapter UI界面中的microbit radio插件，然后点击Codelab Scratch界面的小绿旗。如果控制舵机的microbit显示出一个勾，就表明已经可以正常运行啦！">
 <meta name="twitter:description" content="简易分拣器（无传感器） 利用Codelab Adapter和Teachable Machine，再配合电脑上自带的摄像头，我们可以做一个简单的分拣器，不需要使用任何传感器。Teachable Machine的功能十分强大，它可以通过机器学习识别各种各样的物品，而不仅仅是对颜色进行分类。大家可以大开脑洞，做出更有意思的东西。
-准备 软件
+准备 软件
  安装Codelab Adapter 安装Chrome 浏览器 安装 Chrome 浏览器插件:Tampermonkey 安装 Tampermonkey 脚本Teachablemachine_Result.user.js  硬件
  一个舵机 乐高零件（用纸代替也可以） 双面胶 任意一块micro:bit拓展板（可接入舵机就行） 两块micro:bit  关于Codelab Adapter Codelab Adapter的详细介绍及使用方法参见https://codelab-adapter-docs.codelab.club/。在开始该项目前建议先阅读micro:bit radio、EIM以及Teachable Machine这三篇教学。
 步骤1： 按照micro:bit radio的教程完成中转站micro:bit的连接和程序烧入。
@@ -78,8 +75,7 @@ Tips：记得把Teachable Machine的页面放到一个新的窗口，然后同�
 步骤5： 回到Codelab Scratch的界面，我们可以开始用scratch编程。
 需要点击左下角添加EIM模块和JSON模块。Teachable Machine发回的消息采用的是JSON格式，可以通过JSON模块下的“get value by key”积木块来获取Teachable Machine中对于各个类的置信度。当蓝色置信度大于0.8，则发送信号1，灰色大于0.8则发送信号2，都不大于0.8则发送信号0，每次发送完毕后等待0.1秒，避免接收方信号过多来不及处理。
 步骤6： 接下来可以用makecode为控制舵机的microbit进行编程了。完整程序如下：https://makecode.microbit.org/_fE0MaxbaM527。用一个变量I来控制舵机左转或右转。当接收到信号1的时候将变量设为1，当收到信号2的时候设为2，收到信号0则设为0（不用管那个ok变量，之前忘记移除，懒得修改了）。完成以后烧入microbit。
-步骤7： 接上中转站microbit，点开adapter UI界面中的microbit radio插件，然后点击Codelab Scratch界面的小绿旗。如果控制舵机的microbit显示出一个勾，就表明已经可以正常运行啦！
-Tips：记得把Teachable Machine的页面放到一个新的窗口，然后同时打开Scratch和Teachable Machine的页面，否则会出Bug。">
+步骤7： 接上中转站microbit，点开adapter UI界面中的microbit radio插件，然后点击Codelab Scratch界面的小绿旗。如果控制舵机的microbit显示出一个勾，就表明已经可以正常运行啦！">
 <meta property="og:locale" content="zh-cn">
 
   
@@ -293,6 +289,10 @@ Tips：记得把Teachable Machine的页面放到一个新的窗口，然后同�
             <div class="main-content-wrap">
               <h1 id="heading">简易分拣器（无传感器）</h1>
 <p>利用Codelab Adapter和Teachable Machine，再配合电脑上自带的摄像头，我们可以做一个简单的分拣器，不需要使用任何传感器。Teachable Machine的功能十分强大，它可以通过机器学习识别各种各样的物品，而不仅仅是对颜色进行分类。大家可以大开脑洞，做出更有意思的东西。</p>
+<video id="video" controls="" preload="none" width="640" height="480">
+    <source id="mp4" src="https://fatooo-0027.github.io/img/classifyv.mp4" type="video/mp4">
+</video>
+
 <h3 id="heading1">准备</h3>
 <p>软件</p>
 <ul>
@@ -316,8 +316,9 @@ Tips：记得把Teachable Machine的页面放到一个新的窗口，然后同�
 <h3 id="2">步骤2：</h3>
 <p>开始拼积木！用乐高零件做一个简单的支架，把舵机固定到电脑摄像头下方的位置。然后做一个小支架，套到舵机的转头上。当然，不一定要用乐高，用卡纸或者普通的纸做一个套环把舵机固定在摄像头下方也可以。</p>
 <p><img src="https://fatooo-0027.github.io/img/classify2.png" alt="image"></p>
-<p>如果用乐高来做，建议把microbit拓展板压在下方，避免舵机转动的时候造成支架摇晃。</p>
 <p><img src="https://fatooo-0027.github.io/img/classify3.png" alt="image"></p>
+<p>如果用乐高来做，建议把microbit拓展板压在下方，避免舵机转动的时候造成支架摇晃。</p>
+<p><img src="https://fatooo-0027.github.io/img/classify4.png" alt="image"></p>
 <p>普通的纸也OK。</p>
 <h3 id="3">步骤3：</h3>
 <p>运行Codelab Adapter，打开<a href="https://scratch3v2.codelab.club/">Codelab Scratch</a>。然后打开<a href="https://teachablemachine.withgoogle.com/train">Teachable Machine</a>。此时网页如果弹出“Connected ！”表明Teachable Machine已经成功连接Adapter。</p>

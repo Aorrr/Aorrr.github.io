@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="Adam">
+<meta name="keywords" content="micro:bit">
+<meta name="description" content="利用Codelab Adapter和Teachable Machine，再配合电脑上自带的摄像头，我们可以做一个简单的分拣器。">
+
+
+<meta property="og:description" content="利用Codelab Adapter和Teachable Machine，再配合电脑上自带的摄像头，我们可以做一个简单的分拣器。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简易分拣器（无传感器）">
+<meta name="twitter:title" content="简易分拣器（无传感器）">
+<meta property="og:url" content="https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8/">
+<meta property="twitter:url" content="https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8/">
+<meta property="og:site_name" content="Hugo tranquilpeak theme">
+<meta property="og:description" content="利用Codelab Adapter和Teachable Machine，再配合电脑上自带的摄像头，我们可以做一个简单的分拣器。">
+<meta name="twitter:description" content="利用Codelab Adapter和Teachable Machine，再配合电脑上自带的摄像头，我们可以做一个简单的分拣器。">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2020-01-11T21:07:27">
+  
+  
+    <meta property="article:modified_time" content="2020-01-11T21:07:27">
+  
+  
+  
+    
+      <meta property="article:section" content="Codelab">
+    
+  
+  
+    
+      <meta property="article:tag" content="micro:bit">
+    
+      <meta property="article:tag" content="Codelab">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/1affc2c02f2d6d18e486f1befcd1eea5?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/1affc2c02f2d6d18e486f1befcd1eea5?s=640">
+
+
+    <title>简易分拣器（无传感器）</title>
+
+    <link rel="icon" href="https://fatooo-0027.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://fatooo-0027.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://fatooo-0027.github.io/">Hugo tranquilpeak theme</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://fatooo-0027.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/1affc2c02f2d6d18e486f1befcd1eea5?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://fatooo-0027.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/1affc2c02f2d6d18e486f1befcd1eea5?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">Adam</h4>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://fatooo-0027.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://fatooo-0027.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://fatooo-0027.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://fatooo-0027.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://fatooo-0027.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/Fatooo-0027" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      简易分拣器（无传感器）
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-01-11T21:07:27&#43;08:00">
+        
+  一月 11, 2020
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://fatooo-0027.github.io/categories/codelab">Codelab</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>利用Codelab Adapter和Teachable Machine，再配合电脑上自带的摄像头，我们可以做一个简单的分拣器，不需要使用任何传感器。Teachable Machine的功能十分强大，它可以通过机器学习识别各种各样的物品，而不仅仅是对颜色进行分类。大家可以大开脑洞，做出更有意思的东西。</p>
+<video id="video" controls="" preload="none" width="640" height="480">
+    <source id="mp4" src="https://fatooo-0027.github.io/img/classifyv.mp4" type="video/mp4">
+</video>
+
+<h3 id="heading">准备</h3>
+<p>软件</p>
+<ul>
+<li>安装<a href="https://adapterv2.codelab.club/user_guide/install/">Codelab Adapter</a></li>
+<li>安装<a href="https://www.google.cn/chrome/index.html">Chrome 浏览器</a></li>
+<li>安装 Chrome 浏览器插件:<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a></li>
+<li>安装 Tampermonkey 脚本<a href="https://gist.github.com/wwj718/78402d0de9efb8d33742c8770056489c/raw/1269fef28877f4c7625a4dd21990271fdf04cfe8/Teachablemachine_Result_fixed.user.js">Teachablemachine_Result.user.js</a></li>
+</ul>
+<p>硬件</p>
+<ul>
+<li>一个舵机</li>
+<li>乐高零件（用纸代替也可以）</li>
+<li>双面胶</li>
+<li>任意一块micro:bit拓展板（可接入舵机就行）</li>
+<li>两块micro:bit</li>
+</ul>
+<h3 id="codelab-adapter">关于Codelab Adapter</h3>
+<p>Codelab Adapter的详细介绍及使用方法参见<a href="https://codelab-adapter-docs.codelab.club/"><a href="https://codelab-adapter-docs.codelab.club/">https://codelab-adapter-docs.codelab.club/</a></a>。在开始该项目前建议先阅读<a href="https://codelab-adapter-docs.codelab.club/extension_guide/microbit_radio/">micro:bit radio</a>、<a href="https://codelab-adapter-docs.codelab.club/extension_guide/eim/">EIM</a>以及<a href="https://codelab-adapter-docs.codelab.club/extension_guide/teachable_machine/">Teachable Machine</a>这三篇教学。</p>
+<h3 id="1">步骤1：</h3>
+<p>按照<a href="https://codelab-adapter-docs.codelab.club/extension_guide/microbit_radio/">micro:bit radio</a>的教程完成中转站micro:bit的连接和程序烧入。</p>
+<h3 id="2">步骤2：</h3>
+<p>开始拼积木！用乐高零件做一个简单的支架，把舵机固定到电脑摄像头下方的位置。然后做一个小支架，套到舵机的转头上。当然，不一定要用乐高，用卡纸或者普通的纸做一个套环把舵机固定在摄像头下方也可以。</p>
+<figure>
+    <img src="https://fatooo-0027.github.io/img/classify2.jfif" width="480" height="640"/> 
+</figure>
+
+<figure>
+    <img src="https://fatooo-0027.github.io/img/classify3.jfif" width="480" height="640"/> 
+</figure>
+
+<p>如果用乐高来做，建议把microbit拓展板压在下方，避免舵机转动的时候造成支架摇晃。</p>
+<figure>
+    <img src="https://fatooo-0027.github.io/img/classify4.jfif" width="480" height="640"/> 
+</figure>
+
+<p>普通的纸也OK。</p>
+<h3 id="3">步骤3：</h3>
+<p>运行Codelab Adapter，打开<a href="https://scratch3v2.codelab.club/">Codelab Scratch</a>。然后打开<a href="https://teachablemachine.withgoogle.com/train">Teachable Machine</a>。此时网页如果弹出“Connected ！”表明Teachable Machine已经成功连接Adapter。</p>
+<h3 id="4">步骤4：</h3>
+<p>把分拣器的位置调整好，使摄像头能够清楚识别分拣器中的物件。训练Teachable Machine。分别将蓝色和黑色的乐高零件放到分类器的小容器中，让Teachable Machine进行识别。尽可能改变零件的位置，让AI学习到各种可能出现的情况。然后把零件取出，让AI学习什么都没有的情况。</p>
+<p>同时我们需要让Teachable Machine学习小支架转下去后的情况，这种情况应该要归为什么都没有。（因为如果转下去的时候AI错误识别为灰色或者蓝色，小支架回到原位后又会继续往左或往右转动。）</p>
+<h3 id="5">步骤5：</h3>
+<p>回到Codelab Scratch的界面，我们可以开始用scratch编程。</p>
+<p><img src="https://fatooo-0027.github.io/img/classify1.png" alt="image"></p>
+<p>需要点击左下角添加EIM模块和JSON模块。Teachable Machine发回的消息采用的是JSON格式，可以通过JSON模块下的“get value by key”积木块来获取Teachable Machine中对于各个类的置信度。当蓝色置信度大于0.8，则发送信号1，灰色大于0.8则发送信号2，都不大于0.8则发送信号0，每次发送完毕后等待0.1秒，避免接收方信号过多来不及处理。</p>
+<h3 id="6">步骤6：</h3>
+<p>接下来可以用makecode为控制舵机的microbit进行编程了。完整程序如下：<a href="https://makecode.microbit.org/_fE0MaxbaM527"><a href="https://makecode.microbit.org/_fE0MaxbaM527">https://makecode.microbit.org/_fE0MaxbaM527</a></a>。用一个变量I来控制舵机左转或右转。当接收到信号1的时候将变量设为1，当收到信号2的时候设为2，收到信号0则设为0（不用管那个ok变量，之前忘记移除，懒得修改了）。完成以后烧入microbit。</p>
+<h3 id="7">步骤7：</h3>
+<p>接上中转站microbit，点开adapter UI界面中的microbit radio插件，然后点击Codelab Scratch界面的小绿旗。如果控制舵机的microbit显示出一个勾，就表明已经可以正常运行啦！</p>
+<p>Tips：记得把Teachable Machine的页面放到一个新的窗口，然后同时打开Scratch和Teachable Machine的页面，否则会出Bug。</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://fatooo-0027.github.io/tags/microbit/">micro:bit</a>
+
+  <a class="tag tag--primary tag--small" href="https://fatooo-0027.github.io/tags/codelab/">Codelab</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/" data-tooltip="手势操控micro:bit小车">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/01/%E5%88%86%E6%B2%BB/" data-tooltip="分治">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 Adam. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/" data-tooltip="手势操控micro:bit小车">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/01/%E5%88%86%E6%B2%BB/" data-tooltip="分治">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E7%25AE%2580%25E6%2598%2593%25E5%2588%2586%25E6%258B%25A3%25E5%2599%25A8%25E6%2597%25A0%25E4%25BC%25A0%25E6%2584%259F%25E5%2599%25A8%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E7%25AE%2580%25E6%2598%2593%25E5%2588%2586%25E6%258B%25A3%25E5%2599%25A8%25E6%2597%25A0%25E4%25BC%25A0%25E6%2584%259F%25E5%2599%25A8%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E7%25AE%2580%25E6%2598%2593%25E5%2588%2586%25E6%258B%25A3%25E5%2599%25A8%25E6%2597%25A0%25E4%25BC%25A0%25E6%2584%259F%25E5%2599%25A8%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/1affc2c02f2d6d18e486f1befcd1eea5?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">Adam</h4>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Undergraduate Student
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://fatooo-0027.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://fatooo-0027.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/fatooo-0027.github.io\/2020\/01\/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8\/';
+          
+            this.page.identifier = '\/2020\/01\/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
