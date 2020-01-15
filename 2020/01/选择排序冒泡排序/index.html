@@ -7,26 +7,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Adam">
-<meta name="keywords" content="二分查找">
-<meta name="description" content="二分查找的功能是在一个有序的元素列表中查找一个特定的元素。">
+<meta name="keywords" content="选择排序, 冒泡排序">
+<meta name="description" content="选择排序和冒泡排序是最简单的两种排序算法。">
 
 
-<meta property="og:description" content="二分查找的功能是在一个有序的元素列表中查找一个特定的元素。">
+<meta property="og:description" content="选择排序和冒泡排序是最简单的两种排序算法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二分查找">
-<meta name="twitter:title" content="二分查找">
-<meta property="og:url" content="https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
-<meta property="twitter:url" content="https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+<meta property="og:title" content="选择排序、冒泡排序">
+<meta name="twitter:title" content="选择排序、冒泡排序">
+<meta property="og:url" content="https://fatooo-0027.github.io/2020/01/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
+<meta property="twitter:url" content="https://fatooo-0027.github.io/2020/01/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
 <meta property="og:site_name" content="Hugo tranquilpeak theme">
-<meta property="og:description" content="二分查找的功能是在一个有序的元素列表中查找一个特定的元素。">
-<meta name="twitter:description" content="二分查找的功能是在一个有序的元素列表中查找一个特定的元素。">
+<meta property="og:description" content="选择排序和冒泡排序是最简单的两种排序算法。">
+<meta name="twitter:description" content="选择排序和冒泡排序是最简单的两种排序算法。">
 <meta property="og:locale" content="zh-cn">
 
   
-    <meta property="article:published_time" content="2020-01-08T12:51:03">
+    <meta property="article:published_time" content="2020-01-15T09:32:43">
   
   
-    <meta property="article:modified_time" content="2020-01-08T12:51:03">
+    <meta property="article:modified_time" content="2020-01-15T09:32:43">
   
   
   
@@ -38,9 +38,11 @@
   
   
     
-      <meta property="article:tag" content="二分查找">
-    
       <meta property="article:tag" content="算法">
+    
+      <meta property="article:tag" content="选择排序">
+    
+      <meta property="article:tag" content="冒泡排序">
     
   
 
@@ -61,14 +63,14 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/1affc2c02f2d6d18e486f1befcd1eea5?s=640">
 
 
-    <title>二分查找</title>
+    <title>选择排序、冒泡排序</title>
 
     <link rel="icon" href="https://fatooo-0027.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+    <link rel="canonical" href="https://fatooo-0027.github.io/2020/01/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -206,15 +208,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      二分查找
+      选择排序、冒泡排序
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-01-08T12:51:03&#43;08:00">
+      <time itemprop="datePublished" datetime="2020-01-15T09:32:43&#43;08:00">
         
-  一月 8, 2020
+  一月 15, 2020
 
       </time>
     
@@ -235,33 +237,53 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h4 id="heading">功能</h4>
-<p>二分查找的功能是在一个有序的元素列表中查找一个特定的元素。</p>
+              <h2 id="heading">选择排序</h2>
 <h4 id="heading1">时间复杂度</h4>
-<p>O(log n)</p>
+<p>O(n²)</p>
 <h4 id="heading2">原理</h4>
-<p>比方说你和朋友在玩猜数游戏，朋友先想好一个1到100的数，由你来猜这个数是多少。每猜一次朋友都会告诉你你猜的数是大了还是小了。要解决这个问题有两个办法。</p>
-<p>第一个办法是从1开始猜，一直猜到100。但如果对方想的数是100，那我们就需要猜100次才能猜对。这种方法的效率比较低。这种方法相当于遍历整个列表，进行一一比较。</p>
-<p>第二个办法是先猜50，如果小了，那么小于等于50的数字就都被排除了。每次都猜范围内的中间数。这样我们每次都能排除掉一半的数字，效率提高了很多。这就是二分查找。</p>
+<p>选择排序是最简单的排序算法，原理也简单直观：遍历列表n次，每次找到并移除列表中最小的元素，放入一个新的列表中。最后这个新的列表就是一个有序列表。</p>
+<p>由于一共需要遍历n次，每次需要检查的元素个数是递减的，所以总的时间复杂度为：n + (n - 1) + （n - 2）+ …… + 1。化简后可知时间复杂度为O(n²)。</p>
 <h4 id="python">Python实现</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">binarySearch</span>(list, item):
-    low <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-    high <span style="color:#f92672">=</span> len(list) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
-    <span style="color:#66d9ef">while</span> low <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> high:
-        mid <span style="color:#f92672">=</span> (low <span style="color:#f92672">+</span> high) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
-        guess <span style="color:#f92672">=</span> list[mid]
-        <span style="color:#66d9ef">if</span> guess <span style="color:#f92672">==</span> item:
-            <span style="color:#66d9ef">return</span> mid
-        <span style="color:#66d9ef">if</span> guess <span style="color:#f92672">&gt;</span> item:
-            high <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">else</span>:
-            low <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
-    <span style="color:#66d9ef">return</span> None
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findSmallest</span>(arr):
+    smallest <span style="color:#f92672">=</span> arr[<span style="color:#ae81ff">0</span>]
+    smallest_index <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(arr)):
+        <span style="color:#66d9ef">if</span> arr[i] <span style="color:#f92672">&lt;</span> smallest:
+            smallest <span style="color:#f92672">=</span> arr[i]
+            smallest_index <span style="color:#f92672">=</span> i
+    <span style="color:#66d9ef">return</span> smallest_index
 
-ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>]
-<span style="color:#66d9ef">print</span>(binarySearch(ls, <span style="color:#ae81ff">2</span>))
-</code></pre></div><p>摘自：《算法图解》</p>
-
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">selectionSort</span>(arr):
+    newArr <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(arr)):
+        smallest <span style="color:#f92672">=</span> findSmallest(arr)
+        newArr<span style="color:#f92672">.</span>append(arr<span style="color:#f92672">.</span>pop(smallest))
+    <span style="color:#66d9ef">return</span> newArr
+</code></pre></div><h2 id="heading3">冒泡排序</h2>
+<h4 id="heading4">时间复杂度</h4>
+<p>O(n²)</p>
+<h4 id="heading5">原理</h4>
+<p>冒泡排序是一个简单而且经典的算法。其原理是遍历列表中的所有元素，将每个元素和它后面的一个元素进行比较，如果比排在后面的元素大则交换位置。遍历一直重复n-1次（要使列表变为有序最多需要遍历列表n-1次）。</p>
+<h4 id="python1">Python实现</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bubbleSort</span>(arr):
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(arr) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(arr) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">if</span> arr[j] <span style="color:#f92672">&gt;</span> arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]:
+                arr[j], arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>], arr[j]
+    <span style="color:#66d9ef">return</span> arr    
+</code></pre></div><h4 id="heading6">简单优化</h4>
+<p>当列表已经有序时就不需要继续遍历列表，可以创建一个flag变量来表明列表是否已经有序。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bubbleSort</span>(arr):
+    change <span style="color:#f92672">=</span> false
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(arr) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(arr) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">if</span> arr[j] <span style="color:#f92672">&gt;</span> arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]:
+                arr[j], arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>], arr[j]
+                change <span style="color:#f92672">=</span> true
+        <span style="color:#66d9ef">if</span> change <span style="color:#f92672">==</span> false:
+            <span style="color:#66d9ef">return</span> arr
+    <span style="color:#66d9ef">return</span> arr    
+</code></pre></div>
               
             </div>
           </div>
@@ -273,9 +295,11 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">标签</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://fatooo-0027.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">二分查找</a>
-
   <a class="tag tag--primary tag--small" href="https://fatooo-0027.github.io/tags/%E7%AE%97%E6%B3%95/">算法</a>
+
+  <a class="tag tag--primary tag--small" href="https://fatooo-0027.github.io/tags/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/">选择排序</a>
+
+  <a class="tag tag--primary tag--small" href="https://fatooo-0027.github.io/tags/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">冒泡排序</a>
 
                   </div>
                 
@@ -288,7 +312,7 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2019/12/rrf%E4%BD%BF%E7%94%A8%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E5%92%8C%E8%AF%B4%E6%98%8E/" data-tooltip="RRF使用时遇到的一些问题和说明">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/01/%E5%88%86%E6%B2%BB/" data-tooltip="分治">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -296,7 +320,7 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/" data-tooltip="手势操控micro:bit小车">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -314,19 +338,19 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://fatooo-0027.github.io/2020/01/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://fatooo-0027.github.io/2020/01/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://fatooo-0027.github.io/2020/01/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -374,7 +398,7 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2019/12/rrf%E4%BD%BF%E7%94%A8%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E5%92%8C%E8%AF%B4%E6%98%8E/" data-tooltip="RRF使用时遇到的一些问题和说明">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/01/%E5%88%86%E6%B2%BB/" data-tooltip="分治">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -382,7 +406,7 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/" data-tooltip="手势操控micro:bit小车">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -400,19 +424,19 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://fatooo-0027.github.io/2020/01/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://fatooo-0027.github.io/2020/01/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://fatooo-0027.github.io/2020/01/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -442,19 +466,19 @@ ls <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E4%25BA%258C%25E5%2588%2586%25E6%259F%25A5%25E6%2589%25BE%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E9%2580%2589%25E6%258B%25A9%25E6%258E%2592%25E5%25BA%258F%25E5%2586%2592%25E6%25B3%25A1%25E6%258E%2592%25E5%25BA%258F%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E4%25BA%258C%25E5%2588%2586%25E6%259F%25A5%25E6%2589%25BE%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E9%2580%2589%25E6%258B%25A9%25E6%258E%2592%25E5%25BA%258F%25E5%2586%2592%25E6%25B3%25A1%25E6%258E%2592%25E5%25BA%258F%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E4%25BA%258C%25E5%2588%2586%25E6%259F%25A5%25E6%2589%25BE%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F01%2F%25E9%2580%2589%25E6%258B%25A9%25E6%258E%2592%25E5%25BA%258F%25E5%2586%2592%25E6%25B3%25A1%25E6%258E%2592%25E5%25BA%258F%2F">
           <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
         </a>
       </li>
@@ -544,9 +568,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/fatooo-0027.github.io\/2020\/01\/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE\/';
+          this.page.url = 'https:\/\/fatooo-0027.github.io\/2020\/01\/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F\/';
           
-            this.page.identifier = '\/2020\/01\/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE\/'
+            this.page.identifier = '\/2020\/01\/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F\/'
           
         };
         (function() {
