@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="Adam">
+<meta name="keywords" content="Codelab">
+<meta name="description" content="在Codelab的实习是短暂却十分难忘的。这次实习是我的第一次实习，它和我所以为的实习应该有的样子大有不同。这个过程当中我觉得获益良多，感慨也很多。但张口闭口说自己获益良多感慨良多，并没有什么实际的意义，于是便写了这篇博文，希望简单记录一下这段时光，同时也正好是个机会让我好好反思自己到底获了什么益，感慨了些什么。
+先说说我对Codelab的印象吧。 澳洲大学的暑假有将近3个月长，若是每天都待在家里，肯定是受不了的。正在琢磨假期要干什么的时候，收到了朋友David的邀请，问有没有兴趣一起去实习。David的爸爸手下的公司正在做一个叫”龙眼“的项目，听说是一个和IOT有关的教育项目。David和龙眼的”负责人“文杰之前就认识，据David说，文杰是一个很厉害的人。有实习的机会对我一个刚学完大一的人来说实在是求之不得，更何况能够向一个”很厉害“的师傅学习，这实在是太好的机会了。
+实习的第一天，心情很激动，也有一点紧张，毕竟是第一次上班。到了公司，公司的人给我和David介绍了公司目前在做的几个项目。得知我们确定想要加入龙眼项目之后（虽然那时候我对龙眼在做的事情仍然一头雾水），我们被带到了另一层楼的一间”办公室“。
+”办公室“之所以打引号，是因为这里着实不像是一间办公室。房间里遍地摆放着各种各样的物件，大多是电器设备。另外还能看到一些乐高积木，以及一些熟悉的开发板，比如Arduino，还有一些我叫不出名字的东西。房间中央有四张可升降的桌子拼在一起，形成一个很大的平面。房间门口印着一个大大的logo：Codelab。
+这里不是办公室，这里更像是一个给孩子的乐园。或者说，不单单是给孩子的，因为我感觉我也被房间里的各种设备所吸引。这就是我对Codelab的第一印象。
+文杰给我们做了一个详尽的展示。房间里的所有设备都被文杰接入到了一个他所写的，名叫Adapter的程序上。所有设备通过消息相互通信，而Adapter就是作为所有消息的中转站。也就是说，空间中的东西都能够互相交互，你可以挥动一个魔法杖来让灯泡熄灭，又或是打一个响指来升起窗帘。在看演示的时候还不知道Adapter具体是什么，只是觉得这里的一切实在是太酷了。
+后来我才知道，Codelab和David他爸爸的公司并不是一回事。Codelab是一个非盈利组织，最初由文杰创办，只是文杰把他所写的Adapter授权给公司去商业化，才有了之前说到的”龙眼“项目。商业公司自然是必须要盈利的，这也是”龙眼“项目需要重点考虑的东西。但Codelab作为一个非盈利组织，他们希望做的事情和商业公司自然是有很大区别的。
+Codelab的正式员工只有文杰和柳青两个人。所以其实要说对Codelab的印象，必然要说说对文杰和柳青的印象。文杰">
+
+
+<meta property="og:description" content="在Codelab的实习是短暂却十分难忘的。这次实习是我的第一次实习，它和我所以为的实习应该有的样子大有不同。这个过程当中我觉得获益良多，感慨也很多。但张口闭口说自己获益良多感慨良多，并没有什么实际的意义，于是便写了这篇博文，希望简单记录一下这段时光，同时也正好是个机会让我好好反思自己到底获了什么益，感慨了些什么。
+先说说我对Codelab的印象吧。 澳洲大学的暑假有将近3个月长，若是每天都待在家里，肯定是受不了的。正在琢磨假期要干什么的时候，收到了朋友David的邀请，问有没有兴趣一起去实习。David的爸爸手下的公司正在做一个叫”龙眼“的项目，听说是一个和IOT有关的教育项目。David和龙眼的”负责人“文杰之前就认识，据David说，文杰是一个很厉害的人。有实习的机会对我一个刚学完大一的人来说实在是求之不得，更何况能够向一个”很厉害“的师傅学习，这实在是太好的机会了。
+实习的第一天，心情很激动，也有一点紧张，毕竟是第一次上班。到了公司，公司的人给我和David介绍了公司目前在做的几个项目。得知我们确定想要加入龙眼项目之后（虽然那时候我对龙眼在做的事情仍然一头雾水），我们被带到了另一层楼的一间”办公室“。
+”办公室“之所以打引号，是因为这里着实不像是一间办公室。房间里遍地摆放着各种各样的物件，大多是电器设备。另外还能看到一些乐高积木，以及一些熟悉的开发板，比如Arduino，还有一些我叫不出名字的东西。房间中央有四张可升降的桌子拼在一起，形成一个很大的平面。房间门口印着一个大大的logo：Codelab。
+这里不是办公室，这里更像是一个给孩子的乐园。或者说，不单单是给孩子的，因为我感觉我也被房间里的各种设备所吸引。这就是我对Codelab的第一印象。
+文杰给我们做了一个详尽的展示。房间里的所有设备都被文杰接入到了一个他所写的，名叫Adapter的程序上。所有设备通过消息相互通信，而Adapter就是作为所有消息的中转站。也就是说，空间中的东西都能够互相交互，你可以挥动一个魔法杖来让灯泡熄灭，又或是打一个响指来升起窗帘。在看演示的时候还不知道Adapter具体是什么，只是觉得这里的一切实在是太酷了。
+后来我才知道，Codelab和David他爸爸的公司并不是一回事。Codelab是一个非盈利组织，最初由文杰创办，只是文杰把他所写的Adapter授权给公司去商业化，才有了之前说到的”龙眼“项目。商业公司自然是必须要盈利的，这也是”龙眼“项目需要重点考虑的东西。但Codelab作为一个非盈利组织，他们希望做的事情和商业公司自然是有很大区别的。
+Codelab的正式员工只有文杰和柳青两个人。所以其实要说对Codelab的印象，必然要说说对文杰和柳青的印象。文杰">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Codelab的难忘时光">
+<meta name="twitter:title" content="在Codelab的难忘时光">
+<meta property="og:url" content="https://fatooo-0027.github.io/2020/02/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89/">
+<meta property="twitter:url" content="https://fatooo-0027.github.io/2020/02/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89/">
+<meta property="og:site_name" content="Hugo tranquilpeak theme">
+<meta property="og:description" content="在Codelab的实习是短暂却十分难忘的。这次实习是我的第一次实习，它和我所以为的实习应该有的样子大有不同。这个过程当中我觉得获益良多，感慨也很多。但张口闭口说自己获益良多感慨良多，并没有什么实际的意义，于是便写了这篇博文，希望简单记录一下这段时光，同时也正好是个机会让我好好反思自己到底获了什么益，感慨了些什么。
+先说说我对Codelab的印象吧。 澳洲大学的暑假有将近3个月长，若是每天都待在家里，肯定是受不了的。正在琢磨假期要干什么的时候，收到了朋友David的邀请，问有没有兴趣一起去实习。David的爸爸手下的公司正在做一个叫”龙眼“的项目，听说是一个和IOT有关的教育项目。David和龙眼的”负责人“文杰之前就认识，据David说，文杰是一个很厉害的人。有实习的机会对我一个刚学完大一的人来说实在是求之不得，更何况能够向一个”很厉害“的师傅学习，这实在是太好的机会了。
+实习的第一天，心情很激动，也有一点紧张，毕竟是第一次上班。到了公司，公司的人给我和David介绍了公司目前在做的几个项目。得知我们确定想要加入龙眼项目之后（虽然那时候我对龙眼在做的事情仍然一头雾水），我们被带到了另一层楼的一间”办公室“。
+”办公室“之所以打引号，是因为这里着实不像是一间办公室。房间里遍地摆放着各种各样的物件，大多是电器设备。另外还能看到一些乐高积木，以及一些熟悉的开发板，比如Arduino，还有一些我叫不出名字的东西。房间中央有四张可升降的桌子拼在一起，形成一个很大的平面。房间门口印着一个大大的logo：Codelab。
+这里不是办公室，这里更像是一个给孩子的乐园。或者说，不单单是给孩子的，因为我感觉我也被房间里的各种设备所吸引。这就是我对Codelab的第一印象。
+文杰给我们做了一个详尽的展示。房间里的所有设备都被文杰接入到了一个他所写的，名叫Adapter的程序上。所有设备通过消息相互通信，而Adapter就是作为所有消息的中转站。也就是说，空间中的东西都能够互相交互，你可以挥动一个魔法杖来让灯泡熄灭，又或是打一个响指来升起窗帘。在看演示的时候还不知道Adapter具体是什么，只是觉得这里的一切实在是太酷了。
+后来我才知道，Codelab和David他爸爸的公司并不是一回事。Codelab是一个非盈利组织，最初由文杰创办，只是文杰把他所写的Adapter授权给公司去商业化，才有了之前说到的”龙眼“项目。商业公司自然是必须要盈利的，这也是”龙眼“项目需要重点考虑的东西。但Codelab作为一个非盈利组织，他们希望做的事情和商业公司自然是有很大区别的。
+Codelab的正式员工只有文杰和柳青两个人。所以其实要说对Codelab的印象，必然要说说对文杰和柳青的印象。文杰">
+<meta name="twitter:description" content="在Codelab的实习是短暂却十分难忘的。这次实习是我的第一次实习，它和我所以为的实习应该有的样子大有不同。这个过程当中我觉得获益良多，感慨也很多。但张口闭口说自己获益良多感慨良多，并没有什么实际的意义，于是便写了这篇博文，希望简单记录一下这段时光，同时也正好是个机会让我好好反思自己到底获了什么益，感慨了些什么。
+先说说我对Codelab的印象吧。 澳洲大学的暑假有将近3个月长，若是每天都待在家里，肯定是受不了的。正在琢磨假期要干什么的时候，收到了朋友David的邀请，问有没有兴趣一起去实习。David的爸爸手下的公司正在做一个叫”龙眼“的项目，听说是一个和IOT有关的教育项目。David和龙眼的”负责人“文杰之前就认识，据David说，文杰是一个很厉害的人。有实习的机会对我一个刚学完大一的人来说实在是求之不得，更何况能够向一个”很厉害“的师傅学习，这实在是太好的机会了。
+实习的第一天，心情很激动，也有一点紧张，毕竟是第一次上班。到了公司，公司的人给我和David介绍了公司目前在做的几个项目。得知我们确定想要加入龙眼项目之后（虽然那时候我对龙眼在做的事情仍然一头雾水），我们被带到了另一层楼的一间”办公室“。
+”办公室“之所以打引号，是因为这里着实不像是一间办公室。房间里遍地摆放着各种各样的物件，大多是电器设备。另外还能看到一些乐高积木，以及一些熟悉的开发板，比如Arduino，还有一些我叫不出名字的东西。房间中央有四张可升降的桌子拼在一起，形成一个很大的平面。房间门口印着一个大大的logo：Codelab。
+这里不是办公室，这里更像是一个给孩子的乐园。或者说，不单单是给孩子的，因为我感觉我也被房间里的各种设备所吸引。这就是我对Codelab的第一印象。
+文杰给我们做了一个详尽的展示。房间里的所有设备都被文杰接入到了一个他所写的，名叫Adapter的程序上。所有设备通过消息相互通信，而Adapter就是作为所有消息的中转站。也就是说，空间中的东西都能够互相交互，你可以挥动一个魔法杖来让灯泡熄灭，又或是打一个响指来升起窗帘。在看演示的时候还不知道Adapter具体是什么，只是觉得这里的一切实在是太酷了。
+后来我才知道，Codelab和David他爸爸的公司并不是一回事。Codelab是一个非盈利组织，最初由文杰创办，只是文杰把他所写的Adapter授权给公司去商业化，才有了之前说到的”龙眼“项目。商业公司自然是必须要盈利的，这也是”龙眼“项目需要重点考虑的东西。但Codelab作为一个非盈利组织，他们希望做的事情和商业公司自然是有很大区别的。
+Codelab的正式员工只有文杰和柳青两个人。所以其实要说对Codelab的印象，必然要说说对文杰和柳青的印象。文杰">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2020-02-11T12:33:37">
+  
+  
+    <meta property="article:modified_time" content="2020-02-11T12:33:37">
+  
+  
+  
+    
+      <meta property="article:section" content="Codelab">
+    
+  
+  
+    
+      <meta property="article:tag" content="Codelab">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/1affc2c02f2d6d18e486f1befcd1eea5?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/1affc2c02f2d6d18e486f1befcd1eea5?s=640">
+
+
+    <title>在Codelab的难忘时光</title>
+
+    <link rel="icon" href="https://fatooo-0027.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://fatooo-0027.github.io/2020/02/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://fatooo-0027.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://fatooo-0027.github.io/">Hugo tranquilpeak theme</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://fatooo-0027.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/1affc2c02f2d6d18e486f1befcd1eea5?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://fatooo-0027.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/1affc2c02f2d6d18e486f1befcd1eea5?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">Adam</h4>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://fatooo-0027.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://fatooo-0027.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://fatooo-0027.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://fatooo-0027.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://fatooo-0027.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/Fatooo-0027" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      在Codelab的难忘时光
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-02-11T12:33:37&#43;11:00">
+        
+  二月 11, 2020
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://fatooo-0027.github.io/categories/codelab">Codelab</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>在Codelab的实习是短暂却十分难忘的。这次实习是我的第一次实习，它和我所以为的实习应该有的样子大有不同。这个过程当中我觉得获益良多，感慨也很多。但张口闭口说自己获益良多感慨良多，并没有什么实际的意义，于是便写了这篇博文，希望简单记录一下这段时光，同时也正好是个机会让我好好反思自己到底获了什么益，感慨了些什么。</p>
+<h5 id="codelab">先说说我对Codelab的印象吧。</h5>
+<p>澳洲大学的暑假有将近3个月长，若是每天都待在家里，肯定是受不了的。正在琢磨假期要干什么的时候，收到了朋友David的邀请，问有没有兴趣一起去实习。David的爸爸手下的公司正在做一个叫”龙眼“的项目，听说是一个和IOT有关的教育项目。David和龙眼的”负责人“文杰之前就认识，据David说，文杰是一个很厉害的人。有实习的机会对我一个刚学完大一的人来说实在是求之不得，更何况能够向一个”很厉害“的师傅学习，这实在是太好的机会了。</p>
+<p>实习的第一天，心情很激动，也有一点紧张，毕竟是第一次上班。到了公司，公司的人给我和David介绍了公司目前在做的几个项目。得知我们确定想要加入龙眼项目之后（虽然那时候我对龙眼在做的事情仍然一头雾水），我们被带到了另一层楼的一间”办公室“。</p>
+<p>”办公室“之所以打引号，是因为这里着实不像是一间办公室。房间里遍地摆放着各种各样的物件，大多是电器设备。另外还能看到一些乐高积木，以及一些熟悉的开发板，比如Arduino，还有一些我叫不出名字的东西。房间中央有四张可升降的桌子拼在一起，形成一个很大的平面。房间门口印着一个大大的logo：Codelab。</p>
+<p>这里不是办公室，这里更像是一个给孩子的乐园。或者说，不单单是给孩子的，因为我感觉我也被房间里的各种设备所吸引。这就是我对Codelab的第一印象。</p>
+<p>文杰给我们做了一个详尽的展示。房间里的所有设备都被文杰接入到了一个他所写的，名叫Adapter的程序上。所有设备通过消息相互通信，而Adapter就是作为所有消息的中转站。也就是说，空间中的东西都能够互相交互，你可以挥动一个魔法杖来让灯泡熄灭，又或是打一个响指来升起窗帘。在看演示的时候还不知道Adapter具体是什么，只是觉得这里的一切实在是太酷了。</p>
+<p>后来我才知道，Codelab和David他爸爸的公司并不是一回事。Codelab是一个非盈利组织，最初由文杰创办，只是文杰把他所写的Adapter授权给公司去商业化，才有了之前说到的”龙眼“项目。商业公司自然是必须要盈利的，这也是”龙眼“项目需要重点考虑的东西。但Codelab作为一个非盈利组织，他们希望做的事情和商业公司自然是有很大区别的。</p>
+<p>Codelab的正式员工只有文杰和柳青两个人。所以其实要说对Codelab的印象，必然要说说对文杰和柳青的印象。文杰</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://fatooo-0027.github.io/tags/codelab/">Codelab</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/02/dijkstra%E7%AE%97%E6%B3%95/" data-tooltip="Dijkstra算法">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://fatooo-0027.github.io/2020/02/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://fatooo-0027.github.io/2020/02/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://fatooo-0027.github.io/2020/02/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 Adam. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://fatooo-0027.github.io/2020/02/dijkstra%E7%AE%97%E6%B3%95/" data-tooltip="Dijkstra算法">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://fatooo-0027.github.io/2020/02/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://fatooo-0027.github.io/2020/02/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://fatooo-0027.github.io/2020/02/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F02%2F%25E5%259C%25A8codelab%25E7%259A%2584%25E9%259A%25BE%25E5%25BF%2598%25E6%2597%25B6%25E5%2585%2589%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F02%2F%25E5%259C%25A8codelab%25E7%259A%2584%25E9%259A%25BE%25E5%25BF%2598%25E6%2597%25B6%25E5%2585%2589%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ffatooo-0027.github.io%2F2020%2F02%2F%25E5%259C%25A8codelab%25E7%259A%2584%25E9%259A%25BE%25E5%25BF%2598%25E6%2597%25B6%25E5%2585%2589%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/1affc2c02f2d6d18e486f1befcd1eea5?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">Adam</h4>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Undergraduate Student
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://fatooo-0027.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://fatooo-0027.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/fatooo-0027.github.io\/2020\/02\/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89\/';
+          
+            this.page.identifier = '\/2020\/02\/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

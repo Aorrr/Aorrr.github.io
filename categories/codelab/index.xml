@@ -6,18 +6,25 @@
     <description>Recent content in Codelab on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 16 Jan 2020 17:59:02 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2020 12:33:37 +1100</lastBuildDate>
     
 	<atom:link href="https://fatooo-0027.github.io/categories/codelab/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>格斗模拟器</title>
-      <link>https://fatooo-0027.github.io/2020/01/%E6%A0%BC%E6%96%97%E6%A8%A1%E6%8B%9F%E5%99%A8/</link>
-      <pubDate>Thu, 16 Jan 2020 17:59:02 +0800</pubDate>
+      <title>在Codelab的难忘时光</title>
+      <link>https://fatooo-0027.github.io/2020/02/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89/</link>
+      <pubDate>Tue, 11 Feb 2020 12:33:37 +1100</pubDate>
       
-      <guid>https://fatooo-0027.github.io/2020/01/%E6%A0%BC%E6%96%97%E6%A8%A1%E6%8B%9F%E5%99%A8/</guid>
-      <description></description>
+      <guid>https://fatooo-0027.github.io/2020/02/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89/</guid>
+      <description>在Codelab的实习是短暂却十分难忘的。这次实习是我的第一次实习，它和我所以为的实习应该有的样子大有不同。这个过程当中我觉得获益良多，感慨也很多。但张口闭口说自己获益良多感慨良多，并没有什么实际的意义，于是便写了这篇博文，希望简单记录一下这段时光，同时也正好是个机会让我好好反思自己到底获了什么益，感慨了些什么。
+先说说我对Codelab的印象吧。 澳洲大学的暑假有将近3个月长，若是每天都待在家里，肯定是受不了的。正在琢磨假期要干什么的时候，收到了朋友David的邀请，问有没有兴趣一起去实习。David的爸爸手下的公司正在做一个叫”龙眼“的项目，听说是一个和IOT有关的教育项目。David和龙眼的”负责人“文杰之前就认识，据David说，文杰是一个很厉害的人。有实习的机会对我一个刚学完大一的人来说实在是求之不得，更何况能够向一个”很厉害“的师傅学习，这实在是太好的机会了。
+实习的第一天，心情很激动，也有一点紧张，毕竟是第一次上班。到了公司，公司的人给我和David介绍了公司目前在做的几个项目。得知我们确定想要加入龙眼项目之后（虽然那时候我对龙眼在做的事情仍然一头雾水），我们被带到了另一层楼的一间”办公室“。
+”办公室“之所以打引号，是因为这里着实不像是一间办公室。房间里遍地摆放着各种各样的物件，大多是电器设备。另外还能看到一些乐高积木，以及一些熟悉的开发板，比如Arduino，还有一些我叫不出名字的东西。房间中央有四张可升降的桌子拼在一起，形成一个很大的平面。房间门口印着一个大大的logo：Codelab。
+这里不是办公室，这里更像是一个给孩子的乐园。或者说，不单单是给孩子的，因为我感觉我也被房间里的各种设备所吸引。这就是我对Codelab的第一印象。
+文杰给我们做了一个详尽的展示。房间里的所有设备都被文杰接入到了一个他所写的，名叫Adapter的程序上。所有设备通过消息相互通信，而Adapter就是作为所有消息的中转站。也就是说，空间中的东西都能够互相交互，你可以挥动一个魔法杖来让灯泡熄灭，又或是打一个响指来升起窗帘。在看演示的时候还不知道Adapter具体是什么，只是觉得这里的一切实在是太酷了。
+后来我才知道，Codelab和David他爸爸的公司并不是一回事。Codelab是一个非盈利组织，最初由文杰创办，只是文杰把他所写的Adapter授权给公司去商业化，才有了之前说到的”龙眼“项目。商业公司自然是必须要盈利的，这也是”龙眼“项目需要重点考虑的东西。但Codelab作为一个非盈利组织，他们希望做的事情和商业公司自然是有很大区别的。
+Codelab的正式员工只有文杰和柳青两个人。所以其实要说对Codelab的印象，必然要说说对文杰和柳青的印象。文杰</description>
     </item>
     
     <item>

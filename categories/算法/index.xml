@@ -6,10 +6,38 @@
     <description>Recent content in 算法 on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Jan 2020 09:32:43 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Feb 2020 18:20:10 +1100</lastBuildDate>
     
 	<atom:link href="https://fatooo-0027.github.io/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>广度优先搜索</title>
+      <link>https://fatooo-0027.github.io/2020/02/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</link>
+      <pubDate>Mon, 10 Feb 2020 18:20:10 +1100</pubDate>
+      
+      <guid>https://fatooo-0027.github.io/2020/02/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>快速排序、归并排序</title>
+      <link>https://fatooo-0027.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</link>
+      <pubDate>Fri, 17 Jan 2020 11:51:26 +0800</pubDate>
+      
+      <guid>https://fatooo-0027.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</guid>
+      <description>快速排序 时间复杂度 O(nlog(n))
+最好：O(nlog(n))
+最坏：O(n²)
+原理 快速排序采用了分治的思想，同时也是一个非常经典、实用的算法。快排的原理其实不难理解，给定一个列表，每次在列表中选出一个基准值（pivot），然后把所有小于该基准值的元素挪到基准值左边，所有大于该基准值的元素挪到基准值右边。然后再对基准值左右的列表执行相同的操作，如此递归，直到列表有序。
+具体的实现思路也比较清晰。选定一个基准值（一般就是列表的第一个元素），然后把小于、大于基准值的元素分别放到两个新的列表less和greater中，然后返回quicksort(less) + pivot + quicksort(greater)。
+Python实现 def quick_sort(arr):if len(arr) &amp;lt; 2:return arrelse:pivot = arr[0]less = []greater = []for i in arr[1:]:if i &amp;lt;= pivot:less.append(i)else:greater.append(i)return quick_sort(less) + [pivot] + quick_sort(greater)print(quick_sort([10, 5, 2, 3]))归并排序 时间复杂度 O(nlog(n))
+最好：O(nlog(n))
+最坏：O(nlog(n))
+原理 归并排序同样采用分治思想，也是一个高效的排序算法。不过虽然时间复杂度稳定在O(nlog(n))，但其每一层递归需要执行的指令数量比较多（也就是计算时间复杂度时被忽略的常数C很大）。而快速排序在绝大多数时候也都能够达到O(nlog(n))的时间复杂度，最坏情况出现的概率极小，所以快排仍是目前采用最多的排序算法。事实证明其性能也确实更出色。
+归并排序的原理是先将列表不断拆分为两截，直到每一截都只剩一个元素。然后再将这些元素两两合并为多个有序列表，再把这些有序列表合并为更长的有序列表，直到整个列表有序。一篇比较好的文章：https://www.cnblogs.com/chengxiao/p/6194356.html
+Python实现 def merge(left, right):l = 0 #index of left r = 0 #index of right result = []while l &amp;lt; len(left) and r &amp;lt; len(right):if left[l] &amp;lt; right[r]:result.</description>
+    </item>
     
     <item>
       <title>选择排序、冒泡排序</title>
