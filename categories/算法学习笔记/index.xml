@@ -2,84 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>算法学习笔记 on Hugo tranquilpeak theme</title>
-    <link>https://fatooo-0027.github.io/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+    <link>https://aorrr.github.io/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
     <description>Recent content in 算法学习笔记 on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 10 Feb 2020 18:20:16 +1100</lastBuildDate>
     
-	<atom:link href="https://fatooo-0027.github.io/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aorrr.github.io/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>深度优先搜索</title>
-      <link>https://fatooo-0027.github.io/2020/02/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</link>
+      <link>https://aorrr.github.io/2020/02/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</link>
       <pubDate>Mon, 10 Feb 2020 18:20:16 +1100</pubDate>
       
-      <guid>https://fatooo-0027.github.io/2020/02/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</guid>
+      <guid>https://aorrr.github.io/2020/02/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</guid>
       <description>图的搜索算法之深度优先搜索。</description>
     </item>
     
     <item>
       <title>广度优先搜索</title>
-      <link>https://fatooo-0027.github.io/2020/02/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</link>
+      <link>https://aorrr.github.io/2020/02/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</link>
       <pubDate>Mon, 10 Feb 2020 18:20:10 +1100</pubDate>
       
-      <guid>https://fatooo-0027.github.io/2020/02/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</guid>
+      <guid>https://aorrr.github.io/2020/02/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>图</title>
-      <link>https://fatooo-0027.github.io/2020/02/%E5%9B%BE/</link>
+      <link>https://aorrr.github.io/2020/02/%E5%9B%BE/</link>
       <pubDate>Mon, 10 Feb 2020 18:19:19 +1100</pubDate>
       
-      <guid>https://fatooo-0027.github.io/2020/02/%E5%9B%BE/</guid>
+      <guid>https://aorrr.github.io/2020/02/%E5%9B%BE/</guid>
       <description>数据结构之：图</description>
     </item>
     
     <item>
       <title>哈希表</title>
-      <link>https://fatooo-0027.github.io/2020/01/%E5%93%88%E5%B8%8C%E8%A1%A8/</link>
+      <link>https://aorrr.github.io/2020/01/%E5%93%88%E5%B8%8C%E8%A1%A8/</link>
       <pubDate>Thu, 23 Jan 2020 13:13:46 +0800</pubDate>
       
-      <guid>https://fatooo-0027.github.io/2020/01/%E5%93%88%E5%B8%8C%E8%A1%A8/</guid>
+      <guid>https://aorrr.github.io/2020/01/%E5%93%88%E5%B8%8C%E8%A1%A8/</guid>
       <description>特殊的数据结构：哈希表</description>
     </item>
     
     <item>
       <title>快速排序、归并排序</title>
-      <link>https://fatooo-0027.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</link>
+      <link>https://aorrr.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</link>
       <pubDate>Fri, 17 Jan 2020 11:51:26 +0800</pubDate>
       
-      <guid>https://fatooo-0027.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</guid>
+      <guid>https://aorrr.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</guid>
       <description>两种采用分治思想的排序算法。</description>
     </item>
     
     <item>
       <title>选择排序、冒泡排序</title>
-      <link>https://fatooo-0027.github.io/2020/01/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</link>
+      <link>https://aorrr.github.io/2020/01/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</link>
       <pubDate>Wed, 15 Jan 2020 09:32:43 +0800</pubDate>
       
-      <guid>https://fatooo-0027.github.io/2020/01/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</guid>
+      <guid>https://aorrr.github.io/2020/01/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</guid>
       <description>选择排序和冒泡排序是最简单的两种排序算法。</description>
     </item>
     
     <item>
       <title>分治</title>
-      <link>https://fatooo-0027.github.io/2020/01/%E5%88%86%E6%B2%BB/</link>
+      <link>https://aorrr.github.io/2020/01/%E5%88%86%E6%B2%BB/</link>
       <pubDate>Mon, 13 Jan 2020 21:58:05 +0800</pubDate>
       
-      <guid>https://fatooo-0027.github.io/2020/01/%E5%88%86%E6%B2%BB/</guid>
+      <guid>https://aorrr.github.io/2020/01/%E5%88%86%E6%B2%BB/</guid>
       <description>分治（Divide and Conquer）并不是一种实际的算法，而是一种解决问题的思路。所谓分治，就是“分而治之”，即把一个复杂的问题分成多个相同的子问题，然后再把这些子问题继续分成更小的子问题，直到每个子问题简单到可以直接求解，然后再利用子问题的解求得原问题的解。</description>
     </item>
     
     <item>
       <title>二分查找</title>
-      <link>https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</link>
+      <link>https://aorrr.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</link>
       <pubDate>Wed, 08 Jan 2020 12:51:03 +0800</pubDate>
       
-      <guid>https://fatooo-0027.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</guid>
+      <guid>https://aorrr.github.io/2020/01/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</guid>
       <description>二分查找的功能是在一个有序的元素列表中查找一个特定的元素。</description>
     </item>
     

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>micro:bit on Hugo tranquilpeak theme</title>
-    <link>https://fatooo-0027.github.io/tags/microbit/</link>
+    <link>https://aorrr.github.io/tags/microbit/</link>
     <description>Recent content in micro:bit on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 11 Jan 2020 21:07:27 +0800</lastBuildDate>
     
-	<atom:link href="https://fatooo-0027.github.io/tags/microbit/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aorrr.github.io/tags/microbit/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>简易分拣器（无传感器）</title>
-      <link>https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8/</link>
+      <link>https://aorrr.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8/</link>
       <pubDate>Sat, 11 Jan 2020 21:07:27 +0800</pubDate>
       
-      <guid>https://fatooo-0027.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8/</guid>
+      <guid>https://aorrr.github.io/2020/01/%E7%AE%80%E6%98%93%E5%88%86%E6%8B%A3%E5%99%A8%E6%97%A0%E4%BC%A0%E6%84%9F%E5%99%A8/</guid>
       <description>利用Codelab Adapter和Teachable Machine，再配合电脑上自带的摄像头，我们可以做一个简单的分拣器。</description>
     </item>
     
     <item>
       <title>手势操控micro:bit小车</title>
-      <link>https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/</link>
+      <link>https://aorrr.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/</link>
       <pubDate>Wed, 08 Jan 2020 15:33:17 +0800</pubDate>
       
-      <guid>https://fatooo-0027.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/</guid>
+      <guid>https://aorrr.github.io/2020/01/%E6%89%8B%E5%8A%BF%E6%93%8D%E6%8E%A7microbit%E5%B0%8F%E8%BD%A6/</guid>
       <description>通过Codelab Adapter在Teachable Machine和Micro:bit之间进行通信</description>
     </item>
     

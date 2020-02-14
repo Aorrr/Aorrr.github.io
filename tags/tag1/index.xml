@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tag1 on Hugo tranquilpeak theme</title>
-    <link>https://fatooo-0027.github.io/tags/tag1/</link>
+    <link>https://aorrr.github.io/tags/tag1/</link>
     <description>Recent content in tag1 on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 14 Feb 2020 21:06:39 +1100</lastBuildDate>
     
-	<atom:link href="https://fatooo-0027.github.io/tags/tag1/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aorrr.github.io/tags/tag1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Test</title>
-      <link>https://fatooo-0027.github.io/2020/02/test/</link>
+      <link>https://aorrr.github.io/2020/02/test/</link>
       <pubDate>Fri, 14 Feb 2020 21:06:39 +1100</pubDate>
       
-      <guid>https://fatooo-0027.github.io/2020/02/test/</guid>
+      <guid>https://aorrr.github.io/2020/02/test/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dijkstra算法</title>
-      <link>https://fatooo-0027.github.io/2020/02/dijkstra%E7%AE%97%E6%B3%95/</link>
+      <link>https://aorrr.github.io/2020/02/dijkstra%E7%AE%97%E6%B3%95/</link>
       <pubDate>Mon, 10 Feb 2020 18:20:45 +1100</pubDate>
       
-      <guid>https://fatooo-0027.github.io/2020/02/dijkstra%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://aorrr.github.io/2020/02/dijkstra%E7%AE%97%E6%B3%95/</guid>
       <description></description>
     </item>
     

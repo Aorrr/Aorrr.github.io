@@ -2,84 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Hugo tranquilpeak theme</title>
-    <link>https://fatooo-0027.github.io/categories/</link>
+    <link>https://aorrr.github.io/categories/</link>
     <description>Recent content in Categories on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 14 Feb 2020 21:06:39 +1100</lastBuildDate>
     
-	<atom:link href="https://fatooo-0027.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aorrr.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>category</title>
-      <link>https://fatooo-0027.github.io/categories/category/</link>
+      <link>https://aorrr.github.io/categories/category/</link>
       <pubDate>Fri, 14 Feb 2020 21:06:39 +1100</pubDate>
       
-      <guid>https://fatooo-0027.github.io/categories/category/</guid>
+      <guid>https://aorrr.github.io/categories/category/</guid>
       <description></description>
     </item>
     
     <item>
       <title>subcategory</title>
-      <link>https://fatooo-0027.github.io/categories/subcategory/</link>
+      <link>https://aorrr.github.io/categories/subcategory/</link>
       <pubDate>Fri, 14 Feb 2020 21:06:39 +1100</pubDate>
       
-      <guid>https://fatooo-0027.github.io/categories/subcategory/</guid>
+      <guid>https://aorrr.github.io/categories/subcategory/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Codelab</title>
-      <link>https://fatooo-0027.github.io/categories/codelab/</link>
+      <link>https://aorrr.github.io/categories/codelab/</link>
       <pubDate>Tue, 11 Feb 2020 12:33:37 +1100</pubDate>
       
-      <guid>https://fatooo-0027.github.io/categories/codelab/</guid>
+      <guid>https://aorrr.github.io/categories/codelab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>算法</title>
-      <link>https://fatooo-0027.github.io/categories/%E7%AE%97%E6%B3%95/</link>
+      <link>https://aorrr.github.io/categories/%E7%AE%97%E6%B3%95/</link>
       <pubDate>Mon, 10 Feb 2020 18:20:16 +1100</pubDate>
       
-      <guid>https://fatooo-0027.github.io/categories/%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://aorrr.github.io/categories/%E7%AE%97%E6%B3%95/</guid>
       <description></description>
     </item>
     
     <item>
       <title>算法学习笔记</title>
-      <link>https://fatooo-0027.github.io/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://aorrr.github.io/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 10 Feb 2020 18:20:16 +1100</pubDate>
       
-      <guid>https://fatooo-0027.github.io/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://aorrr.github.io/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>数据结构</title>
-      <link>https://fatooo-0027.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <link>https://aorrr.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
       <pubDate>Mon, 10 Feb 2020 18:19:19 +1100</pubDate>
       
-      <guid>https://fatooo-0027.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <guid>https://aorrr.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
       <description></description>
     </item>
     
     <item>
       <title>算法思想</title>
-      <link>https://fatooo-0027.github.io/categories/%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3/</link>
+      <link>https://aorrr.github.io/categories/%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3/</link>
       <pubDate>Mon, 13 Jan 2020 21:58:05 +0800</pubDate>
       
-      <guid>https://fatooo-0027.github.io/categories/%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3/</guid>
+      <guid>https://aorrr.github.io/categories/%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>其他</title>
-      <link>https://fatooo-0027.github.io/categories/%E5%85%B6%E4%BB%96/</link>
+      <link>https://aorrr.github.io/categories/%E5%85%B6%E4%BB%96/</link>
       <pubDate>Sun, 15 Dec 2019 17:28:23 +0800</pubDate>
       
-      <guid>https://fatooo-0027.github.io/categories/%E5%85%B6%E4%BB%96/</guid>
+      <guid>https://aorrr.github.io/categories/%E5%85%B6%E4%BB%96/</guid>
       <description></description>
     </item>
     
