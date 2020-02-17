@@ -8,7 +8,12 @@
   </url>
   
   <url>
-    <loc>https://aorrr.github.io/categories/category/</loc>
+    <loc>https://aorrr.github.io/categories/codelab/</loc>
+    <lastmod>2020-02-17T17:22:54+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aorrr.github.io/tags/codelab/</loc>
     <lastmod>2020-02-17T17:22:54+11:00</lastmod>
   </url>
   
@@ -24,21 +29,6 @@
   
   <url>
     <loc>https://aorrr.github.io/post/</loc>
-    <lastmod>2020-02-17T17:22:54+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aorrr.github.io/categories/subcategory/</loc>
-    <lastmod>2020-02-17T17:22:54+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aorrr.github.io/tags/tag1/</loc>
-    <lastmod>2020-02-17T17:22:54+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aorrr.github.io/tags/tag2/</loc>
     <lastmod>2020-02-17T17:22:54+11:00</lastmod>
   </url>
   
@@ -120,16 +110,6 @@
   <url>
     <loc>https://aorrr.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2020-01-17T11:51:26+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aorrr.github.io/tags/codelab/</loc>
-    <lastmod>2020-01-16T17:59:02+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aorrr.github.io/categories/codelab/</loc>
-    <lastmod>2020-01-16T17:59:02+08:00</lastmod>
   </url>
   
   <url>

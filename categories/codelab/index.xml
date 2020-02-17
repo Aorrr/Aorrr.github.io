@@ -6,10 +6,19 @@
     <description>Recent content in Codelab on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 16 Jan 2020 17:59:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2020 17:22:54 +1100</lastBuildDate>
     
 	<atom:link href="https://aorrr.github.io/categories/codelab/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Codelab实习感受</title>
+      <link>https://aorrr.github.io/2020/02/codelab%E5%AE%9E%E4%B9%A0%E6%84%9F%E5%8F%97/</link>
+      <pubDate>Mon, 17 Feb 2020 17:22:54 +1100</pubDate>
+      
+      <guid>https://aorrr.github.io/2020/02/codelab%E5%AE%9E%E4%B9%A0%E6%84%9F%E5%8F%97/</guid>
+      <description>简单记录一下在Codelab实习的时光。</description>
+    </item>
     
     <item>
       <title>格斗模拟器</title>

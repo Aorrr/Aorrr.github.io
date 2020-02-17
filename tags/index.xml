@@ -12,20 +12,11 @@
     
     
     <item>
-      <title>tag1</title>
-      <link>https://aorrr.github.io/tags/tag1/</link>
+      <title>Codelab</title>
+      <link>https://aorrr.github.io/tags/codelab/</link>
       <pubDate>Mon, 17 Feb 2020 17:22:54 +1100</pubDate>
       
-      <guid>https://aorrr.github.io/tags/tag1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tag2</title>
-      <link>https://aorrr.github.io/tags/tag2/</link>
-      <pubDate>Mon, 17 Feb 2020 17:22:54 +1100</pubDate>
-      
-      <guid>https://aorrr.github.io/tags/tag2/</guid>
+      <guid>https://aorrr.github.io/tags/codelab/</guid>
       <description></description>
     </item>
     
@@ -71,15 +62,6 @@
       <pubDate>Thu, 23 Jan 2020 13:13:46 +0800</pubDate>
       
       <guid>https://aorrr.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Codelab</title>
-      <link>https://aorrr.github.io/tags/codelab/</link>
-      <pubDate>Thu, 16 Jan 2020 17:59:02 +0800</pubDate>
-      
-      <guid>https://aorrr.github.io/tags/codelab/</guid>
       <description></description>
     </item>
     

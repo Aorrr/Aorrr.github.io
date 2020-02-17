@@ -12,20 +12,11 @@
     
     
     <item>
-      <title>category</title>
-      <link>https://aorrr.github.io/categories/category/</link>
+      <title>Codelab</title>
+      <link>https://aorrr.github.io/categories/codelab/</link>
       <pubDate>Mon, 17 Feb 2020 17:22:54 +1100</pubDate>
       
-      <guid>https://aorrr.github.io/categories/category/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>subcategory</title>
-      <link>https://aorrr.github.io/categories/subcategory/</link>
-      <pubDate>Mon, 17 Feb 2020 17:22:54 +1100</pubDate>
-      
-      <guid>https://aorrr.github.io/categories/subcategory/</guid>
+      <guid>https://aorrr.github.io/categories/codelab/</guid>
       <description></description>
     </item>
     
@@ -53,15 +44,6 @@
       <pubDate>Mon, 10 Feb 2020 18:19:19 +1100</pubDate>
       
       <guid>https://aorrr.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Codelab</title>
-      <link>https://aorrr.github.io/categories/codelab/</link>
-      <pubDate>Thu, 16 Jan 2020 17:59:02 +0800</pubDate>
-      
-      <guid>https://aorrr.github.io/categories/codelab/</guid>
       <description></description>
     </item>
     
