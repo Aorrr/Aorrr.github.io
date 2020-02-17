@@ -6,28 +6,10 @@
     <description>Recent content in Categories on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 14 Feb 2020 21:06:39 +1100</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2020 12:33:37 +1100</lastBuildDate>
     
 	<atom:link href="https://aorrr.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>category</title>
-      <link>https://aorrr.github.io/categories/category/</link>
-      <pubDate>Fri, 14 Feb 2020 21:06:39 +1100</pubDate>
-      
-      <guid>https://aorrr.github.io/categories/category/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>subcategory</title>
-      <link>https://aorrr.github.io/categories/subcategory/</link>
-      <pubDate>Fri, 14 Feb 2020 21:06:39 +1100</pubDate>
-      
-      <guid>https://aorrr.github.io/categories/subcategory/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Codelab</title>
@@ -41,7 +23,7 @@
     <item>
       <title>算法</title>
       <link>https://aorrr.github.io/categories/%E7%AE%97%E6%B3%95/</link>
-      <pubDate>Mon, 10 Feb 2020 18:20:16 +1100</pubDate>
+      <pubDate>Mon, 10 Feb 2020 18:20:45 +1100</pubDate>
       
       <guid>https://aorrr.github.io/categories/%E7%AE%97%E6%B3%95/</guid>
       <description></description>
@@ -50,7 +32,7 @@
     <item>
       <title>算法学习笔记</title>
       <link>https://aorrr.github.io/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Mon, 10 Feb 2020 18:20:16 +1100</pubDate>
+      <pubDate>Mon, 10 Feb 2020 18:20:45 +1100</pubDate>
       
       <guid>https://aorrr.github.io/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description></description>

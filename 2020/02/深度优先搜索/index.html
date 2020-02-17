@@ -238,7 +238,42 @@
 <h4 id="heading1">时间复杂度</h4>
 <p>对于一个有n个节点，e条边的图，时间复杂度为O(n + e)。</p>
 <h4 id="heading2">原理</h4>
+<p>首先找到一个起点，从这个起点出发，往一个方向一直走到底。当走到无路可走的时候，就回退到上一个节点，继续去检查之前没检查过的节点。</p>
+<figure>
+    <img src="https://aorrr.github.io/img/shensou/shensou1.jpg" width="640" height="480"/> 
+</figure>
+
+<p>以上图为例，假如起点是A，那么深搜的顺序是A — B — E — B — F — B — A — C — A — D — A。</p>
+<p>深搜可以通过栈来实现。</p>
 <h4 id="python">Python实现</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">graph <span style="color:#f92672">=</span> {}
+graph[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">you</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">alice</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">bob</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">claire</span><span style="color:#e6db74">&#34;</span>]
+graph[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">bob</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">anuj</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">peggy</span><span style="color:#e6db74">&#34;</span>]
+graph[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">alice</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">peggy</span><span style="color:#e6db74">&#34;</span>]
+graph[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">claire</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">thom</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">jonny</span><span style="color:#e6db74">&#34;</span>]
+graph[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">anuj</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">=</span> []
+graph[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">peggy</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">=</span> []
+graph[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">thom</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">=</span> []
+graph[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">jonny</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">=</span> []
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dfs</span>(graph, person_to_find):
+    stack <span style="color:#f92672">=</span> []
+    person_checked <span style="color:#f92672">=</span> set()
+    stack<span style="color:#f92672">.</span>append(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">you</span><span style="color:#e6db74">&#34;</span>)
+    <span style="color:#66d9ef">while</span> len(stack) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+        person <span style="color:#f92672">=</span> stack<span style="color:#f92672">.</span>pop()
+        <span style="color:#66d9ef">for</span> next_person <span style="color:#f92672">in</span> graph[person]:
+            <span style="color:#66d9ef">if</span> next_person <span style="color:#f92672">==</span> person_to_find:
+                <span style="color:#66d9ef">return</span> True
+            <span style="color:#66d9ef">elif</span> next_person <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> person_checked:
+                person_checked<span style="color:#f92672">.</span>add(next_person)
+                stack<span style="color:#f92672">.</span>append(person)
+                stack<span style="color:#f92672">.</span>append(next_person)
+                <span style="color:#66d9ef">break</span>
+    <span style="color:#66d9ef">return</span> False
+
+<span style="color:#66d9ef">print</span>(dfs(graph, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">jonny</span><span style="color:#e6db74">&#34;</span>))
+</code></pre></div><p>如果需要寻找的是路线，那么用一个字典记录每个节点的上一个节点即可。另外一个思路是新建一个列表path来记录路径，对path进行实时更新。</p>
 
               
             </div>
