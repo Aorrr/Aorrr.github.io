@@ -7,26 +7,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Adam">
-<meta name="keywords" content="排序">
-<meta name="description" content="两种采用分治思想的排序算法。">
+<meta name="keywords" content="动态规划, 算法">
+<meta name="description" content="强大的动态规划算法！">
 
 
-<meta property="og:description" content="两种采用分治思想的排序算法。">
+<meta property="og:description" content="强大的动态规划算法！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速排序、归并排序">
-<meta name="twitter:title" content="快速排序、归并排序">
-<meta property="og:url" content="https://aorrr.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">
-<meta property="twitter:url" content="https://aorrr.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">
+<meta property="og:title" content="动态规划">
+<meta name="twitter:title" content="动态规划">
+<meta property="og:url" content="https://aorrr.github.io/2020/02/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+<meta property="twitter:url" content="https://aorrr.github.io/2020/02/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
 <meta property="og:site_name" content="Hugo tranquilpeak theme">
-<meta property="og:description" content="两种采用分治思想的排序算法。">
-<meta name="twitter:description" content="两种采用分治思想的排序算法。">
+<meta property="og:description" content="强大的动态规划算法！">
+<meta name="twitter:description" content="强大的动态规划算法！">
 <meta property="og:locale" content="zh-cn">
 
   
-    <meta property="article:published_time" content="2020-01-17T11:51:26">
+    <meta property="article:published_time" content="2020-02-17T11:34:44">
   
   
-    <meta property="article:modified_time" content="2020-01-17T11:51:26">
+    <meta property="article:modified_time" content="2020-02-17T11:34:44">
   
   
   
@@ -59,14 +59,14 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/1affc2c02f2d6d18e486f1befcd1eea5?s=640">
 
 
-    <title>快速排序、归并排序</title>
+    <title>动态规划</title>
 
     <link rel="icon" href="https://aorrr.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://aorrr.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">
+    <link rel="canonical" href="https://aorrr.github.io/2020/02/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -204,15 +204,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      快速排序、归并排序
+      动态规划
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-01-17T11:51:26&#43;08:00">
+      <time itemprop="datePublished" datetime="2020-02-17T11:34:44&#43;11:00">
         
-  一月 17, 2020
+  二月 17, 2020
 
       </time>
     
@@ -233,67 +233,119 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="heading">快速排序</h2>
-<h4 id="heading1">时间复杂度</h4>
-<p>O(nlog(n))</p>
-<p>最好：O(nlog(n))</p>
-<p>最坏：O(n²)</p>
-<h4 id="heading2">原理</h4>
-<p>快速排序采用了分治的思想，同时也是一个非常经典、实用的算法。快排的原理其实不难理解，给定一个列表，每次在列表中选出一个基准值（pivot），然后把所有小于该基准值的元素挪到基准值左边，所有大于该基准值的元素挪到基准值右边。然后再对基准值左右的列表执行相同的操作，如此递归，直到列表有序。</p>
-<p>具体的实现思路也比较清晰。选定一个基准值（一般就是列表的第一个元素），然后把小于、大于基准值的元素分别放到两个新的列表less和greater中，然后返回quicksort(less) + pivot + quicksort(greater)。</p>
+              <h4 id="heading">功能</h4>
+<p>动态规划是一种求解决策过程最优化的算法。什么意思呢？先举个例子。</p>
+<p>假如你是一个小偷，你的背包可以装下4磅的东西。现在可以偷的东西有三样：音响（3000元，4磅）、笔记本电脑（2000元，3磅）还有吉他（1500元，1磅）。</p>
+<p>怎么偷最赚？（当个小偷也不容易）</p>
+<p>这就是著名的01背包问题。这个问题就属于决策过程最优化问题，可以用动态规划解决。实际上，决定一个问题能否用动态规划解决，关键是看这个问题能否被拆分成小问题，且每个小问题是否能被重复利用。</p>
+<h4 id="heading1">原理</h4>
+<p>还是用刚才小偷的例子，如何把这个问题拆分成小问题呢？一个大背包可以分成几个小背包，因此你可以先解决子背包的问题。动态规划算法都从一个网格开始，背包问题的网格如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">吉他</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">音响</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">笔记本电脑</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>1、2、3、4表示的是子背包的容量，各行则为不同的商品。第一行表示你只能偷吉他，第二行表示你只能偷吉他和音响，第三行表示你都可以偷。要填的就是每个格子对应的最大价值。将这个表格填完：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">吉他</td>
+<td align="center">1500</td>
+<td align="center">1500</td>
+<td align="center">1500</td>
+<td align="center">1500</td>
+</tr>
+<tr>
+<td align="center">音响</td>
+<td align="center">1500</td>
+<td align="center">1500</td>
+<td align="center">1500</td>
+<td align="center">3000</td>
+</tr>
+<tr>
+<td align="center">笔记本电脑</td>
+<td align="center">1500</td>
+<td align="center">1500</td>
+<td align="center">2000</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>右下角这个空怎么填？此时背包容量为4磅，而且三样物品都可以偷。首先，假如不偷笔记本电脑，从第二行第四列我们可知，最优解是3000。假如偷笔记本电脑，那么剩余的空间是4-3=1磅。从第二行第一列可知，对于1磅的空间且只能拿吉他或音响的情况下，最优解是1500。所以偷笔记本电脑能得到的价值是2000 + 1500 = 3500 &gt; 3000，因此最优解为3500。</p>
+<p>其实每个格子的值都可以利用公式：max(cell[i - 1][j], 当前商品价值 + cell[i - 1][j - 当前商品的重量])，简单来说就是当前商品拿或者不拿，怎样更赚。有了公式，实现起来就很容易了。上面的这个网格被称作动态规划矩阵（dp matrix）。</p>
+<p>当然，01背包问题只是动态规划的其中一个应用。动态规划更多提供的是一种解决问题的思路。实现动态规划的关键是写出dp矩阵。</p>
 <h4 id="python">Python实现</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">quick_sort</span>(arr):
-    <span style="color:#66d9ef">if</span> len(arr) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>:
-        <span style="color:#66d9ef">return</span> arr
-    <span style="color:#66d9ef">else</span>:
-        pivot <span style="color:#f92672">=</span> arr[<span style="color:#ae81ff">0</span>]
-        less <span style="color:#f92672">=</span> []
-        greater <span style="color:#f92672">=</span> []
-        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> arr[<span style="color:#ae81ff">1</span>:]:
-            <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span> pivot:
-                less<span style="color:#f92672">.</span>append(i)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">dp</span>(weight, value, capacity):
+    row <span style="color:#f92672">=</span> len(weight)
+    column <span style="color:#f92672">=</span> capacity
+    dp_matrix <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(column<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(row<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)]
+
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,row<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,column<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+            <span style="color:#66d9ef">if</span> weight[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">&lt;</span><span style="color:#f92672">=</span>j:
+                dp_matrix[i][j] <span style="color:#f92672">=</span> max(dp_matrix[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j],dp_matrix[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span>weight[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]]<span style="color:#f92672">+</span>value[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])        <span style="color:#75715e">#compare which option is better: take this item or not</span>
             <span style="color:#66d9ef">else</span>:
-                greater<span style="color:#f92672">.</span>append(i)
-        <span style="color:#66d9ef">return</span> quick_sort(less) <span style="color:#f92672">+</span> [pivot] <span style="color:#f92672">+</span> quick_sort(greater)
+                dp_matrix[i][j] <span style="color:#f92672">=</span> dp_matrix[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j]       <span style="color:#75715e">#if the capacity for this column is not big enough, you can&#39;t take the item.</span>
+    <span style="color:#66d9ef">return</span> dp_matrix
 
-<span style="color:#66d9ef">print</span>(quick_sort([<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]))
-</code></pre></div><h2 id="heading3">归并排序</h2>
-<h4 id="heading4">时间复杂度</h4>
-<p>O(nlog(n))</p>
-<p>最好：O(nlog(n))</p>
-<p>最坏：O(nlog(n))</p>
-<h4 id="heading5">原理</h4>
-<p>归并排序同样采用分治思想，也是一个高效的排序算法。不过虽然时间复杂度稳定在O(nlog(n))，但其每一层递归需要执行的指令数量比较多（也就是计算时间复杂度时被忽略的常数C很大）。而快速排序在绝大多数时候也都能够达到O(nlog(n))的时间复杂度，最坏情况出现的概率极小，所以快排仍是目前采用最多的排序算法。事实证明其性能也确实更出色。</p>
-<p>归并排序的原理是先将列表不断拆分为两截，直到每一截都只剩一个元素。然后再将这些元素两两合并为多个有序列表，再把这些有序列表合并为更长的有序列表，直到整个列表有序。一篇比较好的文章：<a href="https://www.cnblogs.com/chengxiao/p/6194356.html"><a href="https://www.cnblogs.com/chengxiao/p/6194356.html">https://www.cnblogs.com/chengxiao/p/6194356.html</a></a></p>
-<h4 id="python1">Python实现</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">merge</span>(left, right):
-    l <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>       <span style="color:#75715e">#index of left</span>
-    r <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>       <span style="color:#75715e">#index of right</span>
-    result <span style="color:#f92672">=</span> []
-    <span style="color:#66d9ef">while</span> l <span style="color:#f92672">&lt;</span> len(left) <span style="color:#f92672">and</span> r <span style="color:#f92672">&lt;</span> len(right):
-        <span style="color:#66d9ef">if</span> left[l] <span style="color:#f92672">&lt;</span> right[r]:
-            result<span style="color:#f92672">.</span>append(left[l])
-            l <span style="color:#f92672">+</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">else</span>:
-            result<span style="color:#f92672">.</span>append(right[r])
-            r <span style="color:#f92672">+</span><span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-    <span style="color:#66d9ef">if</span> l <span style="color:#f92672">==</span> len(left):
-        result <span style="color:#f92672">+</span><span style="color:#f92672">=</span> right[r:]
-    <span style="color:#66d9ef">else</span>:
-        result <span style="color:#f92672">+</span><span style="color:#f92672">=</span> left[l:]
-    <span style="color:#66d9ef">return</span> result
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_items</span>(weight, capacity, dp_matrix):        <span style="color:#75715e">#this function is used to find what items have been taken</span>
+    row <span style="color:#f92672">=</span> len(weight)
+    flag <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(row)]
+    j <span style="color:#f92672">=</span> capacity
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(row,<span style="color:#ae81ff">0</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+        <span style="color:#66d9ef">if</span> dp[i][j] <span style="color:#f92672">!=</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j]:
+            flag[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+            j <span style="color:#f92672">-</span><span style="color:#f92672">=</span> weight[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+    <span style="color:#66d9ef">return</span> flag
 
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">merge_sort</span>(arr):
-    <span style="color:#66d9ef">if</span> len(arr) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>:
-        <span style="color:#66d9ef">return</span> arr
-    mid <span style="color:#f92672">=</span> len(arr) <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
-    left <span style="color:#f92672">=</span> arr[:mid]
-    right <span style="color:#f92672">=</span> arr[mid:]
-    <span style="color:#66d9ef">return</span> merge(merge_sort(left), merge_sort(right))
+weight <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>]
+value <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1500</span>, <span style="color:#ae81ff">3000</span>, <span style="color:#ae81ff">2000</span>]
+dp <span style="color:#f92672">=</span> dp(weight, value, <span style="color:#ae81ff">4</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">The highest value is </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> str(dp[<span style="color:#ae81ff">3</span>][<span style="color:#ae81ff">4</span>]))
+<span style="color:#66d9ef">print</span>(find_items(weight, <span style="color:#ae81ff">4</span>, dp))
 
-<span style="color:#66d9ef">print</span>(merge_sort([<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">4</span>]))
-
-</code></pre></div><h4 id="heading6">参考书籍</h4>
+</code></pre></div><h4 id="heading2">局限性</h4>
+<p>动态规划虽好，但也有它的局限性。刚才的01背包问题，这个01表示什么呢？其实意思就是说，这些物品只能拿或者不拿，没有&quot;拿一部分&quot;的选项。对于可以&quot;拿一部分&quot;的问题，不能采用动态规划。</p>
+<p>其次，将问题拆解为小问题后，每个小问题之间必须是相互独立的。也就是说，之前发生的事不能够影响后面的事。举个例子，假如说我偷了A物品，再去偷B物品，那么B物品的价值就会提升，那这种情况也不能用动态规划，因为是否偷取A，会对B的价值造成影响。</p>
+<h4 id="heading3">参考书籍</h4>
 <p>《算法图解》</p>
 
               
@@ -320,7 +372,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://aorrr.github.io/2020/01/%E6%A0%BC%E6%96%97%E6%A8%A1%E6%8B%9F%E5%99%A8/" data-tooltip="格斗模拟器">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://aorrr.github.io/2020/02/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89/" data-tooltip="在Codelab的难忘时光">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -328,7 +380,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://aorrr.github.io/2020/01/%E5%93%88%E5%B8%8C%E8%A1%A8/" data-tooltip="哈希表">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -346,19 +398,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://aorrr.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://aorrr.github.io/2020/02/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://aorrr.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://aorrr.github.io/2020/02/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://aorrr.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://aorrr.github.io/2020/02/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -406,7 +458,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://aorrr.github.io/2020/01/%E6%A0%BC%E6%96%97%E6%A8%A1%E6%8B%9F%E5%99%A8/" data-tooltip="格斗模拟器">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://aorrr.github.io/2020/02/%E5%9C%A8codelab%E7%9A%84%E9%9A%BE%E5%BF%98%E6%97%B6%E5%85%89/" data-tooltip="在Codelab的难忘时光">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -414,7 +466,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://aorrr.github.io/2020/01/%E5%93%88%E5%B8%8C%E8%A1%A8/" data-tooltip="哈希表">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -432,19 +484,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://aorrr.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://aorrr.github.io/2020/02/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://aorrr.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://aorrr.github.io/2020/02/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://aorrr.github.io/2020/01/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://aorrr.github.io/2020/02/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -474,19 +526,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faorrr.github.io%2F2020%2F01%2F%25E5%25BF%25AB%25E9%2580%259F%25E6%258E%2592%25E5%25BA%258F%25E5%25BD%2592%25E5%25B9%25B6%25E6%258E%2592%25E5%25BA%258F%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faorrr.github.io%2F2020%2F02%2F%25E5%258A%25A8%25E6%2580%2581%25E8%25A7%2584%25E5%2588%2592%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Faorrr.github.io%2F2020%2F01%2F%25E5%25BF%25AB%25E9%2580%259F%25E6%258E%2592%25E5%25BA%258F%25E5%25BD%2592%25E5%25B9%25B6%25E6%258E%2592%25E5%25BA%258F%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Faorrr.github.io%2F2020%2F02%2F%25E5%258A%25A8%25E6%2580%2581%25E8%25A7%2584%25E5%2588%2592%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Faorrr.github.io%2F2020%2F01%2F%25E5%25BF%25AB%25E9%2580%259F%25E6%258E%2592%25E5%25BA%258F%25E5%25BD%2592%25E5%25B9%25B6%25E6%258E%2592%25E5%25BA%258F%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Faorrr.github.io%2F2020%2F02%2F%25E5%258A%25A8%25E6%2580%2581%25E8%25A7%2584%25E5%2588%2592%2F">
           <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
         </a>
       </li>
@@ -576,9 +628,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/aorrr.github.io\/2020\/01\/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F\/';
+          this.page.url = 'https:\/\/aorrr.github.io\/2020\/02\/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92\/';
           
-            this.page.identifier = '\/2020\/01\/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F\/'
+            this.page.identifier = '\/2020\/02\/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92\/'
           
         };
         (function() {
