@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 17 Feb 2020 11:34:44 +1100</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2020 17:22:54 +1100</lastBuildDate>
     
 	<atom:link href="https://aorrr.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>category</title>
+      <link>https://aorrr.github.io/categories/category/</link>
+      <pubDate>Mon, 17 Feb 2020 17:22:54 +1100</pubDate>
+      
+      <guid>https://aorrr.github.io/categories/category/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>subcategory</title>
+      <link>https://aorrr.github.io/categories/subcategory/</link>
+      <pubDate>Mon, 17 Feb 2020 17:22:54 +1100</pubDate>
+      
+      <guid>https://aorrr.github.io/categories/subcategory/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>算法</title>
@@ -30,20 +48,20 @@
     </item>
     
     <item>
-      <title>Codelab</title>
-      <link>https://aorrr.github.io/categories/codelab/</link>
-      <pubDate>Tue, 11 Feb 2020 12:33:37 +1100</pubDate>
-      
-      <guid>https://aorrr.github.io/categories/codelab/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>数据结构</title>
       <link>https://aorrr.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
       <pubDate>Mon, 10 Feb 2020 18:19:19 +1100</pubDate>
       
       <guid>https://aorrr.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Codelab</title>
+      <link>https://aorrr.github.io/categories/codelab/</link>
+      <pubDate>Thu, 16 Jan 2020 17:59:02 +0800</pubDate>
+      
+      <guid>https://aorrr.github.io/categories/codelab/</guid>
       <description></description>
     </item>
     
